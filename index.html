@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RepairProbe: an independent open-source project exploring evidence-based, AI-assisted electronics repair diagnosis.">
+  <title>RepairProbe — evidence-based repair diagnosis</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="RepairProbe home">RepairProbe</a>
+    <nav aria-label="Primary navigation">
+      <a href="#about">About</a><a href="#evidence">Evidence</a><a href="#status">Status</a>
+      <a href="#research">Repair Cafés</a><a href="#support">Support</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">Independent open-source project</p>
+      <h1 id="hero-title">Make repair diagnosis easier to follow.</h1>
+      <p class="lede">RepairProbe explores how observations, real measurements, technical sources and AI-assisted interpretation can work together without taking the repair decision away from the person doing the repair.</p>
+      <p class="notice"><strong>Important:</strong> this is a product and validation question, not a proven claim. AI interpretation is not a measurement.</p>
+    </section>
+
+    <section id="about" class="grid-section" aria-labelledby="about-title">
+      <div><p class="eyebrow">What is RepairProbe?</p><h2 id="about-title">A practical evidence layer for repair work.</h2></div>
+      <div><p>RepairProbe is software-only and local-first in its core direction. It is intended to connect photos and observations, optional readings from tools already available, technical documentation and a structured repair case.</p><p>The project favours simple solutions to real problems, open interfaces and automation where it saves human time.</p></div>
+    </section>
+
+    <section class="grid-section" aria-labelledby="person-title">
+      <div><p class="eyebrow">Who is behind it?</p><h2 id="person-title">A project initiated by Raik Müller.</h2></div>
+      <div><p>Raik's professional background is in the technical/CNC field. Long-standing practical interests include repair, electronics and soldering; additional interests include microcontrollers, self-hosted systems, software and automation.</p><p>AI is used as a tool to make technical knowledge and software development more accessible. It does not replace safety rules, deterministic checks, real measurements or human repair decisions.</p></div>
+    </section>
+
+    <section id="evidence" aria-labelledby="evidence-title"><p class="eyebrow">Evidence model</p><h2 id="evidence-title">Keep different kinds of knowledge distinct.</h2><div class="cards"><article><h3>OBSERVED</h3><p>What a person can directly see or report.</p></article><article><h3>MEASURED</h3><p>A value actually captured with an available instrument.</p></article><article><h3>RETRIEVED</h3><p>Information found in a datasheet, schematic or documented case.</p></article><article><h3>INFERRED</h3><p>A hypothesis derived from the available evidence.</p></article><article><h3>CONFIRMED</h3><p>A result supported by a counter-check or repair outcome.</p></article></div><p class="principle">Inference is not measurement. A photo must never invent an electrical value.</p></section>
+
+    <section id="status" class="status" aria-labelledby="status-title"><p class="eyebrow">Current status</p><h2 id="status-title">A small pre-funding software baseline exists.</h2><p>The private core repository includes structured measurement events, fail-closed validation, a mock adapter, an append-only evidence store, deterministic fixture replay and a passive-first safety baseline. This proves software integrity only. It does not prove repair success, image understanding or AI quality.</p><p><a class="button" href="https://github.com/orgs/RepairProbe/projects">Read the public roadmap</a></p></section>
+
+    <section id="research" class="grid-section" aria-labelledby="research-title"><div><p class="eyebrow">Repair-Café research</p><h2 id="research-title">Practitioner feedback is welcome.</h2></div><div><p>RepairProbe is gathering voluntary, de-identified practitioner feedback to test assumptions about repair diagnosis. No names, private correspondence or personal data are published without permission.</p><p>Engagement does not imply partnership, endorsement, adoption or institutional support.</p></div></section>
+
+    <section aria-labelledby="docs-title"><p class="eyebrow">Documentation</p><h2 id="docs-title">Follow the evidence, not the hype.</h2><p>The canonical development repository remains private. Public-facing information belongs here; technical truth remains versioned in the project repository as decisions become ready to share.</p><p><a href="https://github.com/RepairProbe/repair-probe">Visit the GitHub project</a></p></section>
+
+    <section id="support" class="status" aria-labelledby="support-title"><p class="eyebrow">Support / Sponsorship</p><h2 id="support-title">In preparation.</h2><p>No sponsorship destination is active yet. Funding, payment and legal setup will only be described when a real, verified route exists.</p></section>
+
+    <section id="contact" aria-labelledby="contact-title"><p class="eyebrow">Contact</p><h2 id="contact-title">Get in touch</h2><p>The dedicated RepairProbe project mailbox is being set up and will be published after verification. Until then, use <a href="https://github.com/RepairProbe">the public GitHub organization</a> or its Discussions when available.</p></section>
+  </main>
+  <footer><p>RepairProbe · independent open-source project · no analytics or tracking in this site</p></footer>
+</body>
+</html>
