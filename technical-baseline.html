@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Öffentliche technische Baseline von RepairProbe: vorhandene Vorarbeit, Tests, Grenzen und klar getrennte Förderarbeit.">
+  <meta name="theme-color" content="#0d1411">
+  <title>RepairProbe — Technische Vorarbeit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="RepairProbe Startseite">
+      <span class="brand-mark" aria-hidden="true">RP</span>
+      <span>RepairProbe</span>
+    </a>
+    <nav aria-label="Seitennavigation">
+      <a href="index.html#idee">Idee</a>
+      <a href="#vorhanden">Vorhanden</a>
+      <a href="#grenzen">Grenzen</a>
+      <a href="#foerderung">Förderarbeit</a>
+      <a href="#pruefung">Prüfbarkeit</a>
+      <a href="index.html#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <main id="inhalt">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Technische Vorarbeit</p>
+        <h1 id="hero-title">Was bereits existiert — und was noch nicht.</h1>
+        <p class="lede">RepairProbe startet nicht bei null. Gleichzeitig soll vorhandene Vorarbeit nicht mit der beantragten Neuentwicklung vermischt werden. Diese Seite dokumentiert öffentlich den technischen Ausgangspunkt und seine Grenzen.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#vorhanden">Baseline ansehen</a>
+          <a class="button secondary" href="https://github.com/RepairProbe">RepairProbe auf GitHub</a>
+        </div>
+        <p class="trust-line">Vorarbeit ≠ Förderarbeit · Softwaretest ≠ Reparaturerfolg · Inference ≠ Measurement</p>
+      </div>
+      <aside class="hero-panel" aria-label="Kurzstatus">
+        <p class="panel-label">Status</p>
+        <p class="panel-big">Machbarkeit gezeigt.<br>Produktwirkung offen.</p>
+        <div class="mini-grid">
+          <div><strong>BASELINE</strong><span>vor Förderung</span></div>
+          <div><strong>FOSS</strong><span>Förderergebnisse geplant</span></div>
+          <div><strong>LOCAL-FIRST</strong><span>Kern ohne Pflicht-Cloud</span></div>
+          <div><strong>VALIDIERUNG</strong><span>noch ausstehend</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="vorhanden" aria-labelledby="vorhanden-title">
+      <div class="section-heading">
+        <p class="eyebrow">Pre-Funding-Baseline</p>
+        <h2 id="vorhanden-title">Diese Bausteine sind bereits vorhanden.</h2>
+        <p>Die aktuelle Baseline ist bewusst klein und hardwarefrei. Sie dient als technischer Ausgangspunkt und nicht als Beleg für Produktwirkung.</p>
+      </div>
+      <div class="status-grid">
+        <article class="status-card">
+          <span class="status-badge">Vorhanden</span>
+          <h3>Repair Measurement Event v1</h3>
+          <p>Ein strukturierter Vertrag für Messereignisse, damit reale Messwerte mit ihrem Kontext verarbeitet werden können.</p>
+        </article>
+        <article class="status-card">
+          <span class="status-badge">Vorhanden</span>
+          <h3>Fail-closed Validierung</h3>
+          <p>Ungültige oder unvollständige Eingaben werden nicht stillschweigend als gültige Evidenz akzeptiert.</p>
+        </article>
+        <article class="status-card">
+          <span class="status-badge">Vorhanden</span>
+          <h3>Mock-Adapter</h3>
+          <p>Ein testbarer Adapterpfad erlaubt reproduzierbare Entwicklung ohne reales Messgerät.</p>
+        </article>
+        <article class="status-card">
+          <span class="status-badge">Vorhanden</span>
+          <h3>Evidence Store</h3>
+          <p>Ereignisse können nachvollziehbar gespeichert werden, ohne daraus automatisch eine bestätigte Diagnose zu machen.</p>
+        </article>
+        <article class="status-card">
+          <span class="status-badge">Vorhanden</span>
+          <h3>Fixture-Replay</h3>
+          <p>Vordefinierte Testfälle lassen sich deterministisch wiederholen. Das prüft Softwareverhalten, nicht reale Reparaturqualität.</p>
+        </article>
+        <article class="status-card">
+          <span class="status-badge">Vorhanden</span>
+          <h3>Safety-Baseline</h3>
+          <p>Eine passive, fail-closed Sicherheitsbasis ist vorhanden. Sie ersetzt keine elektrische Sicherheitszertifizierung.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="grenzen" class="split-section" aria-labelledby="grenzen-title">
+      <div>
+        <p class="eyebrow">Grenzen</p>
+        <h2 id="grenzen-title">Was diese Baseline ausdrücklich nicht beweist.</h2>
+      </div>
+      <div class="prose">
+        <p>Die vorhandenen Tests belegen nur, dass definierte Softwareverträge und Fixtures wie erwartet verarbeitet werden.</p>
+        <p>Sie belegen <strong>nicht</strong>, dass RepairProbe ein Gerät korrekt diagnostiziert, Bauteile zuverlässig aus Fotos erkennt, einer allgemeinen KI überlegen ist oder Reparaturen erfolgreicher macht.</p>
+        <p class="callout"><strong>Evidence before claim:</strong> Diese Wirkungen sollen erst im geförderten Prototypen systematisch geprüft werden.</p>
+      </div>
+    </section>
+
+    <section id="foerderung" aria-labelledby="foerderung-title">
+      <div class="section-heading">
+        <p class="eyebrow">Beantragte Neuentwicklung</p>
+        <h2 id="foerderung-title">Die Förderung beginnt oberhalb der Baseline.</h2>
+        <p>Der geplante Förderumfang konzentriert sich auf eine offene, wiederverwendbare Repair-Case- und Evidenzschicht.</p>
+      </div>
+      <div class="steps">
+        <article><span class="step-number">01</span><h3>Repair Case</h3><p>Versionierter Diagnosefall mit offenem Import/Export.</p></article>
+        <article><span class="step-number">02</span><h3>Evidenztypen</h3><p>Beobachtet, gemessen, recherchiert, abgeleitet und bestätigt bleiben technisch unterscheidbar.</p></article>
+        <article><span class="step-number">03</span><h3>Safety</h3><p>Deterministische Grenzen bleiben außerhalb des KI-Modells.</p></article>
+        <article><span class="step-number">04</span><h3>Interoperabilität</h3><p>Vorhandene Wissens-, Mess- und Testsysteme werden angebunden statt nachgebaut.</p></article>
+        <article><span class="step-number">05</span><h3>Validierung</h3><p>Der Workflow wird gegen einen normalen multimodalen KI-Chat und reale sichere Fälle geprüft.</p></article>
+      </div>
+    </section>
+
+    <section id="pruefung" class="status-section" aria-labelledby="pruefung-title">
+      <div>
+        <p class="eyebrow">Prüfbarkeit</p>
+        <h2 id="pruefung-title">Klare Trennung zwischen vorhanden, geplant und unbewiesen.</h2>
+      </div>
+      <div class="status-grid">
+        <article class="status-card">
+          <span class="status-badge">Vor Förderung</span>
+          <h3>Technischer Ausgangspunkt</h3>
+          <p>Messereignis, Validierung, Mock-Adapter, Evidence Store, Replay und Safety-Baseline.</p>
+        </article>
+        <article class="status-card">
+          <span class="status-badge planned">Förderarbeit</span>
+          <h3>Neue Entwicklung</h3>
+          <p>Repair Case, Smartphone-Intake, Evidenzsemantik, Guidance, offene Adapter, portables Bundle und Validierung.</p>
+        </article>
+        <article class="status-card">
+          <span class="status-badge open">Noch offen</span>
+          <h3>Produktwirkung</h3>
+          <p>Reparaturerfolg, Lernwirkung, Bildverständnis und Mehrwert gegenüber allgemeinem KI-Chat müssen erst belegt werden.</p>
+        </article>
+      </div>
+      <p><a class="button primary" href="index.html">Zurück zur RepairProbe-Startseite</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>RepairProbe</strong><span>Unabhängiges Open-Source-Projekt</span></div>
+    <p>Keine Analytics · kein Tracking · keine erfundenen Messwerte</p>
+  </footer>
+</body>
+</html>
