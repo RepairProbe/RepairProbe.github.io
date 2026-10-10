@@ -189,7 +189,7 @@ Jede Klasse: Stempel + Definition + Beispielzeile (aus ADR-0002):
 
 ### In Arbeit (id="antrag")
 - H2: `Vor der Einreichung: den Antrag prüfen, nicht Features stapeln.`
-- Text: `Für den Prototype Fund (Jahrgang 03) wird eine Bewerbung vorbereitet. Gegenstand ist Software-Infrastruktur, geplanter Umfang sind 850 Stunden über sechs Monate. Der Entwurf wird derzeit gegen das tatsächlich geöffnete Antragsformular geprüft, zuletzt am 9. Oktober 2026.`
+- Text: `Für den Prototype Fund (Jahrgang 03) wird eine Bewerbung vorbereitet. Gegenstand ist Software-Infrastruktur, geplanter Umfang sind 850 Stunden über sechs Monate. Der Entwurf ist zuletzt am 9. Oktober 2026 inhaltlich aktualisiert worden. Ein erster Abgleich mit dem geöffneten Antragsformular ist dokumentiert (1. Oktober 2026); die Prüfung der einzelnen Felder im Live-Formular mit dem Bewerberkonto steht noch aus.`
 - Text: `Geprüft werden Fragen, Wort- und Zeichenlimits, Antragsberechtigung, FOSS-Anforderungen, Arbeitsstunden und die optionale Second Stage. Offen sind persönliche Angaben, die reale zeitliche Verfügbarkeit und ein externes Gegenlesen durch Nicht-Fachleute.`
 - Text: `Ob das Projekt solo oder als zweiköpfiges Team antritt, und ob die Second Stage mitgeht, ist noch nicht entschieden.`
 - Callout: `Nutzerinterviews und Fragebögen liefern zusätzliche Evidenz. Sie sind kein Gate für die technische Weiterentwicklung.`
@@ -257,7 +257,7 @@ Jede Klasse: Stempel + Definition + Beispielzeile (aus ADR-0002):
 
 ## Seite 5: 404.html
 - H1: `Diese Adresse führt ins Leere.`
-- Text: `Diese Adresse existiert nicht. Startseite, Evidenzmodell und Fahrplan sind erreichbar.`
+- Text: `Startseite, Evidenzmodell und Fahrplan sind erreichbar.`
 - Buttons: `Zur Startseite` · `Zum Fahrplan`
 
 ---

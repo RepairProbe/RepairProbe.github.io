@@ -147,15 +147,18 @@ section {
 }
 
 .section-head {
-  display: flex; align-items: baseline; gap: 1rem;
+  position: relative;
   border-top: 2px solid var(--ink);
   padding-top: 1rem;
   margin-bottom: 1.25rem;
 }
 
 .section-index {
+  position: absolute;
+  left: 0;
+  top: -1.55rem;
   font-family: var(--mono); font-size: .85rem; font-weight: 600;
-  color: var(--teal-ink); letter-spacing: .06em; flex: none;
+  color: var(--teal-ink); letter-spacing: .06em;
 }
 
 h1, h2, h3 { line-height: 1.12; letter-spacing: -.018em; }
@@ -473,7 +476,6 @@ footer .footer-links a:hover { color: var(--ink); text-decoration: underline; }
   main { padding: 0 .85rem; }
   .actions .button, .contact-actions .button { width: 100%; }
   .panel-instrument { padding: 1.15rem; }
-  .section-head { gap: .7rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
