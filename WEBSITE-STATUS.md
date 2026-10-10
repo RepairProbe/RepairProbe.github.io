@@ -12,8 +12,8 @@ Status: ✅ erledigt · 🔄 läuft · ⬜ offen
 | 3 | Texte | ✅ | 2026-10-10 |
 | 4 | Design-Richtung | ✅ | 2026-10-10 |
 | 5 | Bauen | ✅ | 2026-10-10 |
-| 6 | Prüfen und Feinschliff | 🔄 | 2026-10-10 (unabhängige Abnahme läuft) |
-| 7 | Livegang | 🔄 | 2026-10-10 (Deployment via GitHub Pages nach Merge) |
+| 6 | Prüfen und Feinschliff | ✅ | 2026-10-10 (Content-Review: ship; Visual-Review: ship, 8/8 Seiten) |
+| 7 | Livegang | ✅ | 2026-10-10 (PR #10 gemerged, main 33e08d1, Live-Verifikation im sichtbaren Browser, Live-Crawl 0 defekte Links, Org-Profil via .github PR #3 angeglichen und live verifiziert) |
 | 8 | Danach | ⬜ | (Search Console/Profilabgleich: Projekteinhaber, siehe unten) |
 
 ## Phase-7-Ergebnis Cookies/AGB (2026-10-10)
