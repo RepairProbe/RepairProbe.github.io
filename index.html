@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Quelloffene Reparaturdiagnose in Entwicklung: Beobachtungen, echte Messwerte, Quellen und Vermutungen bleiben getrennt. Offen einsehbar auf GitHub.">
+  <meta name="description" content="Quelloffene Reparaturdiagnose in Entwicklung: Beobachtungen, echte Messwerte, Quellen und Vermutungen bleiben getrennt. Projektstatus öffentlich dokumentiert.">
   <meta name="theme-color" content="#f1f1ee">
   <meta property="og:title" content="RepairProbe – Gemessen ist nur, was wirklich gemessen wurde.">
   <meta property="og:description" content="Quelloffene Reparaturdiagnose in Entwicklung. Beobachtung, Messung, Quelle und Vermutung bleiben getrennt.">
@@ -128,7 +128,7 @@
           <p>Diese Informationen liegen verstreut: in Datenblättern, Schaltplänen, Forumbeiträgen und im Kopf erfahrener Menschen. Wer sie nicht findet oder nicht verbinden kann, bricht ab oder entsorgt ein Gerät, das zu retten gewesen wäre.</p>
         </div>
         <div class="prose">
-          <p>Das Open Repair Alliance berichtet in seinem Jahresbericht 2024 über 18.921 dokumentierte Reparaturfälle mit Hindernis: In 12 Prozent der Fälle fehlte die Reparaturinformation, in 10 Prozent fehlten Werkzeug oder Messgerät.</p>
+          <p>Das Open Repair Alliance berichtet in seinem Jahresbericht 2024 über 18.921 dokumentierte Entsorgungsfälle mit Hindernis: In 12 Prozent der Fälle fehlte die Reparaturinformation, in 10 Prozent fehlten Werkzeug oder Messgerät.</p>
           <p><a href="https://openrepair.org/wp-content/uploads/2024/10/ORA-report-2024-The-rise-of-community-repair.pdf" target="_blank" rel="noopener">Bericht des Open Repair Alliance 2024 (englisch, PDF) ↗</a></p>
         </div>
       </div>
@@ -144,8 +144,7 @@
         <div class="callout">
           <p style="margin:0"><strong>Eine KI darf einordnen und Vermutungen bilden. Sie darf keine Messwerte erfinden.</strong> Was gemessen wurde, steht im Fall. Was nur vermutet wird, ist als Vermutung markiert.</p>
         </div>
-        <p>Ein Foto darf zum Beispiel nie einen ESR-Wert erfinden. Es darf aber begründet sagen: Dieser Elko ist ein hochpriorisierter Prüfkandidat. Die Entscheidung, was geprüft wird, bleibt bei der reparierenden Person.</p>
-        <p>Darüber hinaus bleibt die Sicherheit eine Sache der Software, nicht des Sprachmodells: gefährliche oder unbekannte Energiezustände führen zu einer klaren Ablehnung, nicht zu einer Wagnis-Empfehlung.</p>
+        <p>Ein Foto darf zum Beispiel nie einen ESR-Wert erfinden. Es darf aber begründet sagen: Dieser Elko ist ein hochpriorisierter Prüfkandidat. Die Entscheidung, was geprüft wird, bleibt bei der reparierenden Person. Die Sicherheit bleibt eine Sache der Software, nicht des Sprachmodells: gefährliche oder unbekannte Energiezustände führen zu einer klaren Ablehnung, nicht zu einer Wagnis-Empfehlung.</p>
       </div>
       <div class="protocol" aria-label="Die fünf Evidenzklassen im Überblick">
         <div class="protocol-row">
@@ -187,7 +186,7 @@
         </div>
         <div class="protocol-row">
           <span class="stamp retrieved">RETRIEVED</span>
-          <p>Zu diesem Board bekannte Fehlerbilder recherchieren: bei dieser Bauart fällt häufig der Gleichrichter im Sekundärkreis aus.</p>
+          <p>Zu diesem Board bekannte Fehlerinformationen recherchieren, zum Beispiel zur Gleichrichtung im Sekundärkreis.</p>
         </div>
         <div class="protocol-row">
           <span class="stamp inferred">INFERRED</span>
@@ -223,7 +222,7 @@
           <h3 class="inventory-title"><span class="stamp solid">VORHANDEN</span></h3>
           <ul>
             <li><strong>Geprüfter Messereignis-Vertrag</strong> Repair Measurement Event v1 mit fail-closed Validierung.</li>
-            <li><strong>Evidence Store und Replay</strong> Anhängungssichere Ablage und deterministisches Fixture-Replay für reproduzierbare Tests.</li>
+            <li><strong>Evidence Store und Replay</strong> Nur anfügbare (append-only) Ablage und deterministisches Fixture-Replay für reproduzierbare Tests.</li>
             <li><strong>Passive Safety-Baseline</strong> Lehnt unsichere Aktionen standardmäßig ab.</li>
             <li><strong>Vier Baseline-Tests</strong> Ausführbar ohne Hardware, ohne Konto, ohne Cloud.</li>
           </ul>
@@ -274,7 +273,7 @@
       <div class="faq">
         <details>
           <summary>Ist RepairProbe eine fertige App?</summary>
-          <p>Nein. Es gibt eine kleine, geprüfte technische Basis im Kernrepository. Die Smartphone-App und die geführte Fehlersuche sind geplant und noch nicht gebaut.</p>
+          <p>Nein. Es gibt eine kleine, geprüfte technische Basis im Kernrepository. Es ist derzeit privat; die Veröffentlichung ist geplant. Die Smartphone-App und die geführte Fehlersuche sind ohnehin erst Planung und noch nicht gebaut.</p>
         </details>
         <details>
           <summary>Brauche ich spezielle Messhardware von RepairProbe?</summary>

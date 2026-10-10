@@ -31,7 +31,7 @@ Nicht vorhandene, aber nötige Korrekturen: keine. Es wurden keine Testimonials,
 
 **Meta**
 - Titel: `RepairProbe – Reparaturdiagnose mit klaren Belegen`
-- Beschreibung: `Quelloffene Reparaturdiagnose in Entwicklung: Beobachtungen, echte Messwerte, Quellen und Vermutungen bleiben getrennt. Offen einsehbar auf GitHub.`
+- Beschreibung: `Quelloffene Reparaturdiagnose in Entwicklung: Beobachtungen, echte Messwerte, Quellen und Vermutungen bleiben getrennt. Projektstatus öffentlich dokumentiert.`
 
 ### Hero
 - Sprunglink: `Zum Inhalt springen`
@@ -52,11 +52,11 @@ Nicht vorhandene, aber nötige Korrekturen: keine. Es wurden keine Testimonials,
 - Index `01`, H2: `Reparieren scheitert selten am Löten. Meist fehlt das passende Wissen.`
 - Text: `Ein defektes Gerät stellt Fragen, die sich nicht per Foto beantworten lassen. Welche Spannung ist hier normal? Welche Bauteile fallen bei diesem Modell öfter aus? Wie kommt man überhaupt an die betreffende Stelle? Und welches Ersatzteil passt?`
 - Text: `Diese Informationen liegen verstreut: in Datenblättern, Schaltplänen, Forumbeiträgen und im Kopf erfahrener Menschen. Wer sie nicht findet oder nicht verbinden kann, bricht ab oder entsorgt ein Gerät, das zu retten gewesen wäre.`
-- Belegabsatz: `Das Open Repair Alliance berichtet in seinem Jahresbericht 2024 über 18.921 dokumentierte Reparaturfälle mit Hindernis: In 12 Prozent der Fälle fehlte die Reparaturinformation, in 10 Prozent fehlten Werkzeug oder Messgerät.` Link: `Bericht des Open Repair Alliance (2024, englisch)` → https://openrepair.org/wp-content/uploads/2024/10/ORA-report-2024-The-rise-of-community-repair.pdf
+- Belegabsatz: `Das Open Repair Alliance berichtet in seinem Jahresbericht 2024 über 18.921 dokumentierte Entsorgungsfälle mit Hindernis: In 12 Prozent der Fälle fehlte die Reparaturinformation, in 10 Prozent fehlten Werkzeug oder Messgerät.` Link: `Bericht des Open Repair Alliance (2024, englisch)` → https://openrepair.org/wp-content/uploads/2024/10/ORA-report-2024-The-rise-of-community-repair.pdf
 
 ### Abschnitt: Der Ansatz (id="ansatz")
 - Index `02`, H2: `Beobachtung, Messung, Quelle und Vermutung bleiben getrennt.`
-- Text: `RepairProbe führt vier Arten von Information zusammen und verwaltet sie in einem Repair Case, einem nachvollziehbaren Reparaturfall. Der Kern des Projekts ist eine harte Grenze:`
+- Text: `RepairProbe führt diese Arten von Information zusammen und verwaltet sie in einem Repair Case, einem nachvollziehbaren Reparaturfall. Der Kern des Projekts ist eine harte Grenze:`
 - Hervorhebungsblock (Markenkern): `Eine KI darf einordnen und Vermutungen bilden. Sie darf keine Messwerte erfinden. Was gemessen wurde, steht im Fall. Was nur vermutet wird, ist als Vermutung markiert.`
 - Text: `Ein Foto darf zum Beispiel nie einen ESR-Wert erfinden. Es darf aber begründet sagen: Dieser Elko ist ein hochpriorisierter Prüfkandidat. Die Entscheidung, was geprüft wird, bleibt bei der reparierenden Person.`
 - Fünf Evidenzklassen als Protokollzeilen (Vorschau, Mono-Stempel + Kurztext):
@@ -66,14 +66,14 @@ Nicht vorhandene, aber nötige Korrekturen: keine. Es wurden keine Testimonials,
   - `INFERRED` — `Vermutet: von der KI aus vorhandenen Hinweisen abgeleitet.`
   - `CONFIRMED` — `Bestätigt: durch Gegenprobe, Bauteilprüfung oder gelungene Reparatur.`
 - Link: `Das Evidenzmodell im Detail ansehen` → evidenzmodell.html
-- Nebensatz: `Darüber hinaus bleibt die Sicherheit eine Sache der Software, nicht des Sprachmodells: gefährliche oder unbekannte Energiezustände führen zu einer klaren Ablehnung, nicht zu einer Wagnis-Empfehlung.`
+- Nebensatz (Teil des Foto-Absatzes): `Die Sicherheit bleibt eine Sache der Software, nicht des Sprachmodells: gefährliche oder unbekannte Energiezustände führen zu einer klaren Ablehnung, nicht zu einer Wagnis-Empfehlung.`
 
 ### Abschnitt: Ein echter Ablauf (id="fall")
 - Index `03`, H2: `Ein Fernseher, der nicht mehr angeht.`
 - Einordnung (wichtig, ehrlich): `Dieser Ablauf ist in der Entwicklungsarbeit real so durchlaufen worden. Er zeigt, wie das Projekt Reparatur versteht. Die App dafür existiert noch nicht.`
 - Protokoll-Einträge (Mono-Stempel + Text):
   - `OBSERVED` — `Fotos vom Netzteil-Board und eine Beschreibung des Fehlers: der Fernseher bleibt schwarz.`
-  - `RETRIEVED` — `Zu diesem Board bekannte Fehlerbilder recherchieren: bei dieser Bauart fällt häufig der Gleichrichter im Sekundärkreis aus.`
+  - `RETRIEVED` — `Zu diesem Board bekannte Fehlerinformationen recherchieren, zum Beispiel zur Gleichrichtung im Sekundärkreis.`
   - `INFERRED` — `Die Diode wird zum höchsten Prüfkandidaten erklärt. Das ist eine Einordnung, kein Messergebnis.`
   - `MEASURED` — `Ein Mensch führt den Diodentest durch. Der Wert kommt vom Messgerät, nicht vom Modell.`
   - `CONFIRMED` — `Mit angehobener Leitung bestätigt der Test den Kurzschluss. Die Vermutung wird zum belegten Befund.`
@@ -85,7 +85,7 @@ Nicht vorhandene, aber nötige Korrekturen: keine. Es wurden keine Testimonials,
 - Index `04`, H2: `Was heute existiert. Was Hypothese bleibt.`
 - Spalte `Vorhanden` (Stempel `VORHANDEN`):
   - `Ein geprüfter Vertrag für Messereignisse (Repair Measurement Event v1) mit fail-closed Validierung.`
-  - `Ein anhängungssicherer Evidence Store und ein deterministisches Fixture-Replay für reproduzierbare Tests.`
+  - `Ein nur anfügbarer (append-only) Evidence Store und ein deterministisches Fixture-Replay für reproduzierbare Tests.`
   - `Eine passive Safety-Baseline, die unsichere Aktionen standardmäßig ablehnt.`
   - `Vier Baseline-Tests im Kernrepository, ausführbar ohne Hardware, Konto oder Cloud.`
 - Spalte `Hypothese und Planung` (Stempel `OFFEN`):
@@ -107,7 +107,7 @@ Nicht vorhandene, aber nötige Korrekturen: keine. Es wurden keine Testimonials,
 
 ### Abschnitt: FAQ (id="fragen")
 - Index `06`, H2: `Häufige Fragen`
-- Q: `Ist RepairProbe eine fertige App?` — A: `Nein. Es gibt eine kleine, geprüfte technische Basis im Kernrepository. Die Smartphone-App und die geführte Fehlersuche sind geplant und noch nicht gebaut.`
+- Q: `Ist RepairProbe eine fertige App?` — A: `Nein. Es gibt eine kleine, geprüfte technische Basis im Kernrepository. Es ist derzeit privat; die Veröffentlichung ist geplant. Die Smartphone-App und die geführte Fehlersuche sind ohnehin erst Planung und noch nicht gebaut.`
 - Q: `Brauche ich spezielle Messhardware von RepairProbe?` — A: `Nein. RepairProbe ist reine Software und passt sich den Werkzeugen an, die vorhanden sind. Ein Multimeter oder Komponententester liefert zusätzliche Messwerte, nötig ist das nicht.`
 - Q: `Darf die KI bei RepairProbe Messwerte erfinden?` — A: `Nein. KI-Ausgaben sind Einordnungen und bleiben als solche markiert. Messwerte kommen nur von echten Messgeräten und von Menschen. Diese Grenze ist im Projekt eine Grundregel: Inference is not Measurement.`
 - Q: `Ist die Förderung schon bewilligt?` — A: `Nein. Ein Antrag zum Prototype Fund ist in Vorbereitung. Eingereicht ist er noch nicht, bewilligt ist nichts.`
@@ -133,7 +133,7 @@ Nicht vorhandene, aber nötige Korrekturen: keine. Es wurden keine Testimonials,
 ### Hero
 - H1: `Fünf Evidenzklassen. Eine harte Grenze.`
 - Lede: `Jede Information in einem Reparaturfall trägt eine Herkunft. Fünf Klassen trennen, was gesehen, gemessen, nachgeschlagen, vermutet und bestätigt wurde. Sie sind nicht austauschbar.`
-- Ehrlichkeitszeile: `Diese Klassen sind im Kernrepository als technische Verträge angelegt, nicht nur als Idee.`
+- Ehrlichkeitszeile: `Diese Klassen sind als Architekturentscheidung festgehalten (ADR-0002 im Kernrepository). Ihren technischen Ausbau plant das Projekt als erste Fördermaßnahme.`
 
 ### Die fünf Klassen mit kanonischen Beispielen
 Jede Klasse: Stempel + Definition + Beispielzeile (aus ADR-0002):
@@ -189,7 +189,7 @@ Jede Klasse: Stempel + Definition + Beispielzeile (aus ADR-0002):
 
 ### In Arbeit (id="antrag")
 - H2: `Vor der Einreichung: den Antrag prüfen, nicht Features stapeln.`
-- Text: `Für den Prototype Fund (Jahrgang 03) wird ein Bewerbung vorbereitet. Gegenstand ist Software-Infrastruktur, geplanter Umfang sind 850 Stunden über sechs Monate. Der Entwurf wird derzeit gegen das tatsächlich geöffnete Antragsformular geprüft, zuletzt am 9. Oktober 2026.`
+- Text: `Für den Prototype Fund (Jahrgang 03) wird eine Bewerbung vorbereitet. Gegenstand ist Software-Infrastruktur, geplanter Umfang sind 850 Stunden über sechs Monate. Der Entwurf wird derzeit gegen das tatsächlich geöffnete Antragsformular geprüft, zuletzt am 9. Oktober 2026.`
 - Text: `Geprüft werden Fragen, Wort- und Zeichenlimits, Antragsberechtigung, FOSS-Anforderungen, Arbeitsstunden und die optionale Second Stage. Offen sind persönliche Angaben, die reale zeitliche Verfügbarkeit und ein externes Gegenlesen durch Nicht-Fachleute.`
 - Text: `Ob das Projekt solo oder als zweiköpfiges Team antritt, und ob die Second Stage mitgeht, ist noch nicht entschieden.`
 - Callout: `Nutzerinterviews und Fragebögen liefern zusätzliche Evidenz. Sie sind kein Gate für die technische Weiterentwicklung.`
@@ -250,13 +250,13 @@ Jede Klasse: Stempel + Definition + Beispielzeile (aus ADR-0002):
 
 ### Ökosystem (id="oekosystem")
 - H2: `Ergänzung statt Ersatz.`
-- Text: `RepairProbe erfindet Reparaturwissen und Messsoftware nicht neu, sondern bindet Bestehendes an: Reparaturanleitungen von Plattformen wie iFixit, offene Reparaturdaten (Open Repair Data Standard), Messhardware-Zugriff über Projekte wie sigrok und übliche Instrumente der Reparierenden.`
+- Text: `Reparaturwissen und Messsoftware erfindet RepairProbe nicht neu. Es bindet Bestehendes an: Reparaturanleitungen von Plattformen wie iFixit, offene Reparaturdaten (Open Repair Data Standard), Messhardware-Zugriff über Projekte wie sigrok und übliche Instrumente der Reparierenden.`
 - Text: `Der engere Beitrag des Projekts ist eine offene Schicht für Evidenz, Herkunft, Sicherheit und Reparaturfälle, die vorhandene Werkzeuge verbindet, statt sie zu ersetzen.`
 
 ---
 
 ## Seite 5: 404.html
-- H1: `Seite nicht gefunden.`
+- H1: `Diese Adresse führt ins Leere.`
 - Text: `Diese Adresse existiert nicht. Startseite, Evidenzmodell und Fahrplan sind erreichbar.`
 - Buttons: `Zur Startseite` · `Zum Fahrplan`
 
@@ -301,3 +301,4 @@ Kein Formular auf der Seite (Kontakt per Mailto und GitHub). Keine Zusagen zu An
 - Anrede durchgehalten (neutral, Person in Ich-Form): erfüllt
 - Deutsche Anführungszeichen im finalen HTML: im Build umsetzen
 - Kein Etikett-mit-Doppelpunkt-Aufbau in Fließtexten außer in der wörtlichen Personenvorgabe: erfüllt
+- En-Dash in `<title>`/og:title nur als Trenner zwischen Marken- und Seitenname (Konventionsentscheidung, keine Satzzeichen im Fließtext): dokumentiert

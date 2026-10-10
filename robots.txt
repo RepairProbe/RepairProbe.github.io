@@ -1,5 +1,7 @@
 # Suchmaschinen und KI-Assistenten sind ausdrücklich willkommen.
-# Arbeitsdateien (Skill, Projektarbeit) sind von der Indexierung ausgeschlossen.
+# Arbeitsdateien (Skill, Projektarbeit) sind für alle Crawler ausgeschlossen.
+# Hinweis: RFC 9309 verwendet die spezifischste User-agent-Gruppe, deshalb
+# wiederholen die benannten Gruppen die Disallow-Zeilen.
 
 User-agent: *
 Allow: /
@@ -9,35 +11,57 @@ Disallow: /website-arbeit/
 # KI-Suche und KI-Assistenten
 User-agent: GPTBot
 Allow: /
+Disallow: /.zcode/
+Disallow: /website-arbeit/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /.zcode/
+Disallow: /website-arbeit/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /.zcode/
+Disallow: /website-arbeit/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /.zcode/
+Disallow: /website-arbeit/
 
 User-agent: Perplexity-User
 Allow: /
+Disallow: /.zcode/
+Disallow: /website-arbeit/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /.zcode/
+Disallow: /website-arbeit/
 
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /.zcode/
+Disallow: /website-arbeit/
 
 User-agent: Claude-User
 Allow: /
+Disallow: /.zcode/
+Disallow: /website-arbeit/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /.zcode/
+Disallow: /website-arbeit/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /.zcode/
+Disallow: /website-arbeit/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /.zcode/
+Disallow: /website-arbeit/
 
 Sitemap: https://repairprobe.github.io/sitemap.xml

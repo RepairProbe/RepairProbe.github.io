@@ -25,4 +25,4 @@ Excluded from crawling via `robots.txt` (`/.zcode/`, `/website-arbeit/`).
 
 Serve locally (`python3 -m http.server 8111`), then run the bundled check: `python3 .zcode/skills/website-bauen/werkzeuge/pruefen.py http://localhost:8111`. See `AGENTS.md` for the full validation contract (contrast, keyboard, viewports, crawl, no third-party requests).
 
-Apache License 2.0. See the canonical project license at https://github.com/RepairProbe/repair-probe/blob/main/LICENSE.
+Apache License 2.0, see [LICENSE](LICENSE). The canonical product repository additionally documents its own license at https://github.com/RepairProbe/repair-probe.
