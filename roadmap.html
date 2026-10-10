@@ -3,9 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Öffentlicher RepairProbe-Fahrplan: aktueller Stand, Antragsvorbereitung, geplanter sechsmonatiger Förderumfang und optionale Second Stage.">
-  <meta name="theme-color" content="#0d1411">
-  <title>RepairProbe — Öffentlicher Fahrplan</title>
+  <meta name="description" content="Aktueller Stand, Antragsvorbereitung, geplanter Förderumfang und bewusste Grenzen von RepairProbe. Nichts eingereicht, nichts bewilligt.">
+  <meta name="theme-color" content="#f1f1ee">
+  <meta property="og:title" content="Fahrplan – RepairProbe">
+  <meta property="og:description" content="Aktueller Stand, Antragsvorbereitung, geplanter Förderumfang und bewusste Grenzen von RepairProbe.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://repairprobe.github.io/roadmap.html">
+  <meta property="og:image" content="https://repairprobe.github.io/assets/img/og-image.png">
+  <meta property="og:locale" content="de_DE">
+  <link rel="canonical" href="https://repairprobe.github.io/roadmap.html">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <title>Fahrplan – RepairProbe</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,35 +23,40 @@
 
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="RepairProbe Startseite">
-      <span class="brand-mark" aria-hidden="true">RP</span>
+      <svg class="brand-mark" viewBox="0 0 420 420" aria-hidden="true" focusable="false">
+        <rect x="0" y="0" width="420" height="420" rx="76" fill="#F0F0F0"/>
+        <g fill="#6AC9D7">
+          <rect x="105" y="35" width="210" height="135"/>
+          <rect x="35" y="170" width="350" height="75"/>
+          <rect x="175" y="245" width="70" height="140"/>
+        </g>
+      </svg>
       <span>RepairProbe</span>
     </a>
-    <nav aria-label="Seitennavigation">
-      <a href="index.html#idee">Idee</a>
-      <a href="#heute">Heute</a>
-      <a href="#antrag">Vor Antrag</a>
-      <a href="#foerderphase">Förderphase</a>
-      <a href="#second-stage">Second Stage</a>
-      <a href="#grenzen">Grenzen</a>
+    <nav aria-label="Hauptnavigation">
+      <a href="evidenzmodell.html">Evidenzmodell</a>
+      <a href="roadmap.html" aria-current="page">Fahrplan</a>
+      <a href="technical-baseline.html">Technische Basis</a>
+      <a class="nav-github" href="https://github.com/RepairProbe" title="Öffnet github.com in einem neuen Tab" target="_blank" rel="noopener">GitHub ↗</a>
     </nav>
   </header>
 
   <main id="inhalt">
+
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow">Öffentlicher Fahrplan · Stand 28.09.2026</p>
-        <h1 id="hero-title">Was ist schon da?<br>Was kommt als Nächstes?</h1>
-        <p class="lede">Dieser Fahrplan trennt vorhandene Vorarbeit, laufende Antragsvorbereitung und geplante Förderarbeit. Eine Förderung ist derzeit weder beantragt noch bewilligt.</p>
-        <div class="hero-actions">
+      <div>
+        <p class="hero-claim">Öffentlicher Fahrplan <span class="dot" aria-hidden="true">●</span> Stand 10.10.2026</p>
+        <h1 id="hero-title">Was ist schon da? Was kommt als Nächstes?</h1>
+        <p class="lede">Dieser Fahrplan trennt vorhandene Vorarbeit, laufende Antragsvorbereitung und geplante Förderarbeit. Ein Antrag zum Prototype Fund ist in Vorbereitung. Eingereicht ist er noch nicht. Eine Förderung ist weder beantragt noch bewilligt.</p>
+        <p class="honesty">Vorhanden ≠ geplant · geplant ≠ bewilligt · Wirkung wird erst geprüft</p>
+        <div class="actions">
           <a class="button primary" href="#heute">Zum aktuellen Stand</a>
-          <a class="button secondary" href="technical-baseline.html">Technische Vorarbeit</a>
+          <a class="button" href="technical-baseline.html">Technische Vorarbeit</a>
         </div>
-        <p class="trust-line">Vorhanden ≠ geplant · geplant ≠ bewilligt · Wirkung wird erst geprüft</p>
       </div>
-      <aside class="hero-panel" aria-label="Statuslegende">
-        <p class="panel-label">Status</p>
-        <p class="panel-big">Ein Fahrplan mit klaren Grenzen.</p>
-        <div class="mini-grid">
+      <aside class="panel-instrument" aria-label="Statuslegende">
+        <p class="panel-title">Status</p>
+        <div class="status-rows">
           <div><strong>VORHANDEN</strong><span>bereits umgesetzt</span></div>
           <div><strong>IN ARBEIT</strong><span>aktuell vorbereitet</span></div>
           <div><strong>GEPLANT</strong><span>nur bei Förderung</span></div>
@@ -52,142 +67,139 @@
     </section>
 
     <section id="heute" aria-labelledby="heute-title">
-      <div class="section-heading">
-        <p class="eyebrow">Heute</p>
+      <div class="section-head">
+        <span class="section-index" aria-hidden="true">01</span>
         <h2 id="heute-title">Der technische Ausgangspunkt ist vorhanden.</h2>
-        <p>RepairProbe startet nicht bei null, aber die vorhandene Baseline ist noch kein fertiges Produkt.</p>
-      </div>
-      <div class="status-grid">
-        <article class="status-card">
-          <span class="status-badge">Vorhanden</span>
-          <h3>Messereignis & Evidenzbasis</h3>
-          <p>Strukturierte Messereignisse, Evidence Store und die Trennung von realer Messung und Ableitung sind als technische Baseline vorhanden.</p>
-        </article>
-        <article class="status-card">
-          <span class="status-badge">Vorhanden</span>
-          <h3>Validierung & Replay</h3>
-          <p>Fail-closed Validierung, Mock-Adapter und deterministische Fixture-Replays erlauben reproduzierbare Softwaretests ohne echte Hardware.</p>
-        </article>
-        <article class="status-card">
-          <span class="status-badge">Vorhanden</span>
-          <h3>Öffentliche Projektseite</h3>
-          <p>Die öffentliche Website dokumentiert Idee, Evidenzmodell, Projektstatus, technische Vorarbeit und Kontaktmöglichkeiten.</p>
-        </article>
-      </div>
-      <p><a class="button primary" href="technical-baseline.html">Technische Baseline im Detail</a></p>
-    </section>
-
-    <section id="antrag" class="split-section" aria-labelledby="antrag-title">
-      <div>
-        <p class="eyebrow">In Arbeit</p>
-        <h2 id="antrag-title">Vor der Einreichung: Antrag prüfen, nicht Features stapeln.</h2>
       </div>
       <div class="prose">
-        <p>Für den Prototype Fund wird derzeit eine Bewerbung vorbereitet. Am 1. Oktober 2026 soll das tatsächlich geöffnete Jahrgang-03-Formular mit dem vorbereiteten Antrag abgeglichen werden.</p>
-        <p>Geprüft werden insbesondere Fragen, Wort- und Zeichenlimits, formale Antragsberechtigung, FOSS-Anforderungen, Arbeitsstunden und die optionale Second Stage.</p>
-        <p>Vor dem Absenden sind außerdem persönliche Angaben, reale zeitliche Verfügbarkeit und ein externer Nicht-Fachleute-Review offen.</p>
-        <p class="callout"><strong>Wichtig:</strong> Nutzerinterviews und Fragebögen liefern zusätzliche Evidenz, sind aber kein Gate für die technische Weiterentwicklung.</p>
+        <p>RepairProbe startet nicht bei null, aber die vorhandene Baseline ist noch kein fertiges Produkt.</p>
+      </div>
+      <div class="inventory single">
+        <div>
+          <h3 class="inventory-title"><span class="stamp solid">VORHANDEN</span></h3>
+          <ul>
+            <li><strong>Messereignis &amp; Evidenzbasis</strong> Strukturierte Messereignisse, Evidence Store und die Trennung von realer Messung und Ableitung sind als technische Baseline vorhanden.</li>
+            <li><strong>Validierung &amp; Replay</strong> Fail-closed Validierung, Mock-Adapter und deterministische Fixture-Replays erlauben reproduzierbare Softwaretests ohne echte Hardware.</li>
+            <li><strong>Öffentliche Projektseite</strong> Die Website dokumentiert Idee, Evidenzmodell, Projektstatus, technische Vorarbeit und Kontaktmöglichkeiten.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="button primary" href="technical-baseline.html">Technische Baseline im Detail</a>
+      </div>
+    </section>
+
+    <section id="antrag" aria-labelledby="antrag-title">
+      <div class="section-head">
+        <span class="section-index" aria-hidden="true">02</span>
+        <h2 id="antrag-title">Vor der Einreichung: den Antrag prüfen, nicht Features stapeln.</h2>
+      </div>
+      <div class="prose">
+        <p>Für den Prototype Fund (Jahrgang 03) wird eine Bewerbung vorbereitet. Gegenstand ist Software-Infrastruktur, geplanter Umfang sind 850 Stunden über sechs Monate. Der Entwurf wird derzeit gegen das tatsächlich geöffnete Antragsformular geprüft, zuletzt am 9. Oktober 2026.</p>
+        <p>Geprüft werden Fragen, Wort- und Zeichenlimits, Antragsberechtigung, FOSS-Anforderungen, Arbeitsstunden und die optionale Second Stage. Offen sind persönliche Angaben, die reale zeitliche Verfügbarkeit und ein externes Gegenlesen durch Nicht-Fachleute.</p>
+        <p>Ob das Projekt solo oder als zweiköpfiges Team antritt, und ob die Second Stage mitgeht, ist noch nicht entschieden.</p>
+        <div class="callout">
+          <p style="margin:0"><strong>Zusatz, kein Gate:</strong> Nutzerinterviews und Fragebögen liefern zusätzliche Evidenz. Sie sind kein Gate für die technische Weiterentwicklung.</p>
+        </div>
       </div>
     </section>
 
     <section id="foerderphase" aria-labelledby="foerderphase-title">
-      <div class="section-heading">
-        <p class="eyebrow">Geplant bei Förderung</p>
+      <div class="section-head">
+        <span class="section-index" aria-hidden="true">03</span>
         <h2 id="foerderphase-title">Sechs Monate für einen offenen, überprüfbaren Prototyp.</h2>
+      </div>
+      <div class="prose">
         <p>Diese Schritte sind der geplante Förderumfang. Sie sind noch nicht bewilligt und werden erst nach einer positiven Förderentscheidung umgesetzt.</p>
       </div>
-
-      <div class="status-grid">
-        <article class="status-card">
-          <span class="status-badge planned">Monat 1</span>
-          <h3>Repair Case & Evidenzvertrag</h3>
-          <p>Versionierter Diagnosefall, Evidenztypen, Herkunft, Unsicherheit und Zustandsregeln. Ungültige Übergänge müssen technisch abgelehnt werden.</p>
-        </article>
-        <article class="status-card">
-          <span class="status-badge planned">Monat 2</span>
-          <h3>Smartphone-Intake</h3>
-          <p>Fotos, Symptome und Beobachtungen erfassen. OCR oder Bildanalyse dürfen Beobachtungen ergänzen, aber keine elektrischen Messwerte erfinden.</p>
-        </article>
-        <article class="status-card">
-          <span class="status-badge planned">Monat 3</span>
-          <h3>Prüfschritte & Sicherheitsgrenzen</h3>
-          <p>Geeignete nächste Prüfschritte aus Fallzustand und verfügbaren Werkzeugen ableiten. Deterministische Regeln blockieren unzulässige Aktionen.</p>
-        </article>
-        <article class="status-card">
-          <span class="status-badge planned">Monat 4</span>
-          <h3>Austauschbare KI & Quellen</h3>
-          <p>KI- und Rechercheanbieter anbinden, ohne Messung oder Sicherheitszustand dem Modell zu überlassen. Quellen und Unsicherheit bleiben sichtbar.</p>
-        </article>
-        <article class="status-card">
-          <span class="status-badge planned">Monat 5</span>
-          <h3>Local-first & Interoperabilität</h3>
-          <p>Lokaler Case Store, portables Import-/Export-Bundle und mindestens eine externe Integrationsstrecke zu vorhandenen Wissens-, Mess- oder Testsystemen.</p>
-        </article>
-        <article class="status-card">
-          <span class="status-badge planned">Monat 6</span>
-          <h3>Validierung, Hardening & Release</h3>
-          <p>Vergleich mit normalem multimodalen KI-Chat, Tests mit sicheren Fällen, Fehlerkorrekturen, Dokumentation und reproduzierbarer FOSS-Prototyp.</p>
-        </article>
+      <div class="protocol" aria-label="Geplanter Förderumfang">
+        <div class="protocol-row">
+          <span class="stamp observed">MONAT 1</span>
+          <p><strong>Evidenz- und Repair-Case-Vertrag.</strong> Evidenztypen, Herkunft, Unsicherheit und Zustandsregeln. Ungültige Übergänge müssen technisch abgelehnt werden.</p>
+        </div>
+        <div class="protocol-row">
+          <span class="stamp observed">MONAT 2</span>
+          <p><strong>Visueller Smartphone-Intake.</strong> Fotos, Symptome und Beobachtungen erfassen. Bildanalyse darf Beobachtungen ergänzen, aber keine elektrischen Messwerte erfinden.</p>
+        </div>
+        <div class="protocol-row">
+          <span class="stamp observed">MONAT 3</span>
+          <p><strong>Prüfschritte &amp; Sicherheitsgrenzen.</strong> Nächste sinnvolle Prüfschritte aus Fallzustand und verfügbaren Werkzeugen ableiten. Deterministische Regeln blockieren unzulässige Aktionen.</p>
+        </div>
+        <div class="protocol-row">
+          <span class="stamp observed">MONAT 4</span>
+          <p><strong>Austauschbare KI &amp; Quellen.</strong> KI- und Rechercheanbieter anbinden, ohne Messung oder Sicherheitszustand dem Modell zu überlassen. Quellen und Unsicherheit bleiben sichtbar.</p>
+        </div>
+        <div class="protocol-row">
+          <span class="stamp observed">MONAT 5</span>
+          <p><strong>Local-first &amp; Interoperabilität.</strong> Lokaler Case Store, portables Import-/Export-Bundle und mindestens eine externe Integrationsstrecke zu vorhandenen Wissens-, Mess- oder Testsystemen.</p>
+        </div>
+        <div class="protocol-row">
+          <span class="stamp observed">MONAT 6</span>
+          <p><strong>Validierung, Hardening &amp; Release.</strong> Vergleich mit einem normalen multimodalen KI-Chat, Tests mit sicheren Fällen, Fehlerkorrekturen, Dokumentation und reproduzierbarer FOSS-Prototyp.</p>
+        </div>
       </div>
     </section>
 
-    <section id="second-stage" class="status-section" aria-labelledby="second-stage-title">
-      <div>
-        <p class="eyebrow">Optional</p>
+    <section id="second-stage" aria-labelledby="second-stage-title">
+      <div class="section-head">
+        <span class="section-index" aria-hidden="true">04</span>
         <h2 id="second-stage-title">Mögliche Second Stage: Nutzung statt Feature-Sammlung.</h2>
       </div>
-      <p class="lede">Diese vier zusätzlichen Monate sind nur eine vorbereitete Option. Die Entscheidung für ein Opt-in ist noch offen; eine Second Stage ist nicht bewilligt.</p>
-      <div class="status-grid">
-        <article class="status-card">
-          <span class="status-badge open">Monat 7</span>
-          <h3>Nutzbarkeit & Dokumentation</h3>
-          <p>User Tests, verständliche Einführung, Entwicklerdokumentation und Priorisierung real beobachteter Verbesserungen.</p>
-        </article>
-        <article class="status-card">
-          <span class="status-badge open">Monat 8</span>
-          <h3>Interoperabilität & Beiträge</h3>
-          <p>Integrationsbeispiele, Contribution Guide und dokumentierte Erweiterungspunkte für externe Werkzeuge und Datenquellen.</p>
-        </article>
-        <article class="status-card">
-          <span class="status-badge open">Monat 9</span>
-          <h3>Community & reale Nutzung</h3>
-          <p>Gezielte Ansprache von Repair-Cafés, offenen Werkstätten und FOSS-Communities sowie freiwillige, klar abgegrenzte Nutzungstests.</p>
-        </article>
-        <article class="status-card">
-          <span class="status-badge open">Monat 10</span>
-          <h3>Nachhaltigkeit</h3>
-          <p>Wartungs- und Governance-Modell, Datenschutz für optionales Teilen, Release-Prozess und realistische Fortführung nach der Förderung.</p>
-        </article>
+      <div class="prose">
+        <p>Diese vier zusätzlichen Monate sind eine vorbereitete Option. Die Entscheidung dafür ist offen; bewilligt ist nichts.</p>
+      </div>
+      <div class="protocol" aria-label="Optionale Second Stage">
+        <div class="protocol-row">
+          <span class="stamp retrieved">MONAT 7</span>
+          <p><strong>Nutzbarkeit &amp; Dokumentation.</strong> User Tests, verständliche Einführung, Entwicklerdokumentation und Priorisierung real beobachteter Verbesserungen.</p>
+        </div>
+        <div class="protocol-row">
+          <span class="stamp retrieved">MONAT 8</span>
+          <p><strong>Interoperabilität &amp; Beiträge.</strong> Integrationsbeispiele, Contribution Guide und dokumentierte Erweiterungspunkte für externe Werkzeuge und Datenquellen.</p>
+        </div>
+        <div class="protocol-row">
+          <span class="stamp retrieved">MONAT 9</span>
+          <p><strong>Community &amp; reale Nutzung.</strong> Gezielte Ansprache von Repair-Cafés, offenen Werkstätten und FOSS-Communities sowie freiwillige, klar abgegrenzte Nutzungstests.</p>
+        </div>
+        <div class="protocol-row">
+          <span class="stamp retrieved">MONAT 10</span>
+          <p><strong>Nachhaltigkeit.</strong> Wartungs- und Governance-Modell, Datenschutz für optionales Teilen, Release-Prozess und realistische Fortführung nach der Förderung.</p>
+        </div>
       </div>
     </section>
 
-    <section id="grenzen" class="split-section" aria-labelledby="grenzen-title">
-      <div>
-        <p class="eyebrow">Bewusste Grenzen</p>
+    <section id="grenzen" aria-labelledby="grenzen-title">
+      <div class="section-head">
+        <span class="section-index" aria-hidden="true">05</span>
         <h2 id="grenzen-title">Was dieser Fahrplan ausdrücklich nicht verspricht.</h2>
       </div>
       <div class="prose">
         <p>RepairProbe plant im Förderkern <strong>kein eigenes LLM</strong>, <strong>keine universellen Gerätetreiber</strong>, <strong>kein Boardview-System</strong>, <strong>keine eigene Pflicht-Cloud</strong> und <strong>keine dedizierte RepairProbe-Messhardware</strong>.</p>
-        <p>Bestehende Reparaturquellen, Messsoftware, Testframeworks und KI-Modelle sollen über offene Grenzen angebunden statt nachgebaut werden.</p>
-        <p>Auch universelle Diagnose, zertifizierte elektrische Sicherheit, nachgewiesene Umweltwirkung oder garantierte Reparaturerfolge werden nicht versprochen.</p>
-        <p class="callout"><strong>Ziel:</strong> Ein kleiner, offener und reproduzierbarer Softwarekern, dessen Nutzen anschließend anhand realer Evidenz bewertet werden kann.</p>
+        <p>Bestehende Reparaturquellen, Messsoftware, Testframeworks und KI-Modelle werden über offene Grenzen angebunden statt nachgebaut. Auch universelle Diagnose, zertifizierte elektrische Sicherheit, nachgewiesene Umweltwirkung oder garantierte Reparaturerfolge werden nicht versprochen.</p>
+        <div class="callout">
+          <p style="margin:0"><strong>Ziel:</strong> ein kleiner, offener und reproduzierbarer Softwarekern, dessen Nutzen sich anschließend anhand realer Evidenz bewerten lässt.</p>
+        </div>
       </div>
-    </section>
-
-    <section class="contact-section" aria-labelledby="weiter-title">
-      <p class="eyebrow">Weiterlesen</p>
-      <h2 id="weiter-title">Projektstand und technische Basis.</h2>
-      <div class="contact-actions">
+      <div class="actions">
         <a class="button primary" href="index.html">Zur Startseite</a>
-        <a class="button secondary" href="technical-baseline.html">Technische Vorarbeit</a>
-        <a class="button secondary" href="https://github.com/RepairProbe">RepairProbe auf GitHub</a>
+        <a class="button" href="technical-baseline.html">Technische Vorarbeit</a>
+        <a class="button quiet" href="https://github.com/RepairProbe" target="_blank" rel="noopener">RepairProbe auf GitHub ↗</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <div><strong>RepairProbe</strong><span>Unabhängiges Open-Source-Projekt</span></div>
-    <p>Fahrplanstand 28.09.2026 · keine Förderzusage behauptet</p>
+    <div>
+      <strong>RepairProbe</strong><br>
+      Unabhängiges Open-Source-Projekt
+    </div>
+    <div class="footer-links" aria-label="Weitere Links">
+      <a href="index.html">Startseite</a>
+      <a href="evidenzmodell.html">Evidenzmodell</a>
+      <a href="technical-baseline.html">Technische Basis</a>
+      <a href="index.html#kontakt">Kontakt</a>
+    </div>
+    <p style="margin:0">Fahrplanstand 10.10.2026 · keine Förderzusage behauptet</p>
   </footer>
 </body>
 </html>
