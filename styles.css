@@ -901,3 +901,12 @@ footer strong { color: var(--text); }
     font-size: 1.05rem;
   }
 }
+
+
+/* Personal about-section detail — 2026-09-28 */
+.homepage .profile-age {
+  margin-top: -.35rem;
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 1.05rem;
+}
