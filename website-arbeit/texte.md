@@ -92,10 +92,9 @@ Nicht vorhandene, aber nötige Korrekturen: keine. Es wurden keine Testimonials,
   - `Die Smartphone-App mit Foto-Eingabe und geführter Fehlersuche ist noch nicht gebaut.`
   - `Ob der Ansatz Reparaturen tatsächlich erleichtert, muss mit echten Fällen gezeigt werden. Diese Wirkung ist bisher nicht belegt.`
 - Unterabschnitt `Erste Rückmeldung aus der Praxis`:
-  - `Ein Repair-Café hat einen Fragebogen beantwortet, eine weitere Person hat ein Gespräch zugesagt. Das ist wenig, und es ist die einzige Rückmeldung, die bislang vorliegt.`
-  - `Die Antworten bestärken: Smartphone-Unterstützung ist hilfreich, die Trennung von Beobachtung, Messung und Quelle wird geschätzt, und begrenzte KI-Rollen (Fotos einordnen, Verlauf zusammenfassen) werden akzeptiert.`
-  - `Die Antworten korrigieren: Statt „Welcher Prüfschritt kommt als Nächstes?“ steht im Alltag offenbar mehr der Zugang zu Reparaturinformationen, das Öffnen des Geräts und das Finden passender Ersatzteile im Weg. RepairProbe hat die Planung daraufhin angepasst.`
-  - Kennzeichnung: `Eine Rückmeldung, n=1, explorativ. Keine Partnerschaft, keine Empfehlung.`
+  - `Eine Person hat einen Fragebogen beantwortet (n=1, explorativ). Davon getrennt hat eine weitere Person einem Gespräch zugestimmt; ein Termin ist noch nicht vereinbart. Das ist keine Partnerschaft und keine Pilotzusage.`
+  - `Diese eine Antwort bewertet Smartphone-Unterstützung als eher hilfreich und nennt Reparaturinformationen, Ersatzteile und den Zugang zum Gerät als wichtige Hürden. Unklarheit darüber, welcher Prüfschritt als Nächstes sinnvoll ist, und verlorener Reparaturkontext wurden darin als selten berichtet. Begrenzte KI-Hilfe beim Einordnen von Fotos und Zusammenfassen des Verlaufs wurde akzeptiert. Das ist keine Produktvalidierung.`
+  - Kennzeichnung: `Ein Fragebogen, n=1, explorativ; ein separates Gesprächsinteresse ohne vereinbarten Termin. Keine Partnerschaft, keine Pilotzusage, keine Empfehlung.`
 - Aktionen: Button `Fahrplan ansehen` → roadmap.html · Button `Technische Basis` → technical-baseline.html
 
 ### Abschnitt: Person (id="person")
@@ -280,7 +279,7 @@ Kein Formular auf der Seite (Kontakt per Mailto und GitHub). Keine Zusagen zu An
 6. Vorhanden ist eine kleine geprüfte Baseline: Messereignis-Vertrag, fail-closed Validierung, Mock-Adapter, append-only Evidence Store, deterministisches Fixture-Replay, passive Safety-Baseline und vier Tests.
 7. Eine Smartphone-App existiert noch nicht. Sie ist Teil der Planung.
 8. Ein Antrag zum Prototype Fund (Jahrgang 03) ist in Vorbereitung, geplanter Umfang 850 Stunden über sechs Monate. Eingereicht ist er nicht, bewilligt ist nichts.
-9. Ein Repair-Café hat einen Fragebogen beantwortet (n=1, explorativ), eine weitere Person hat ein Gespräch zugesagt. Daraufhin wurde die Planung von „nächster Prüfschritt“ stärker Richtung Reparaturinformationszugang, Demontage und Ersatzteile angepasst.
+9. Eine Person hat einen Fragebogen beantwortet (n=1, explorativ); eine weitere Person hat einem Gespräch zugestimmt, aber ein Termin ist nicht vereinbart. Die Antwort nennt Reparaturinformationen, Ersatzteile und Gerätezugang als Hürden; Unklarheit über den nächsten Prüfschritt und verlorener Reparaturkontext wurden selten berichtet.
 10. Kontakt: repairprobe@gmail.com. GitHub: https://github.com/RepairProbe. Website: https://repairprobe.github.io/.
 11. Neue Projektarbeit wird unter Apache-2.0 veröffentlicht.
 12. Die Website verwendet kein Tracking, keine Cookies und keine Analyse-Dienste.
