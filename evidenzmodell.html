@@ -1,181 +1,215 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Fünf Evidenzklassen von OBSERVED bis CONFIRMED. Warum KI-Einordnungen keine Messwerte ersetzen und Unsicherheit sichtbar bleibt.">
-  <meta name="theme-color" content="#f1f1ee">
-  <meta property="og:title" content="Evidenzmodell – RepairProbe">
-  <meta property="og:description" content="Fünf Evidenzklassen von OBSERVED bis CONFIRMED. Warum KI-Einordnungen keine Messwerte ersetzen.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://repairprobe.github.io/evidenzmodell.html">
-  <meta property="og:image" content="https://repairprobe.github.io/assets/img/og-image.png">
-  <meta property="og:locale" content="de_DE">
-  <link rel="canonical" href="https://repairprobe.github.io/evidenzmodell.html">
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-  <title>Evidenzmodell – RepairProbe</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Was wissen wir wirklich? | RepairProbe
+  </title>
+  <meta content="Wie RepairProbe Beobachtungen, Messungen, Quellen, Vermutungen und Bestätigungen nachvollziehbar trennen soll." name="description"/>
+  <meta content="#f6f7f4" name="theme-color"/>
+  <meta content="Was wissen wir wirklich? | RepairProbe" property="og:title"/>
+  <meta content="Wie RepairProbe Beobachtungen, Messungen, Quellen, Vermutungen und Bestätigungen nachvollziehbar trennen soll." property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://repairprobe.github.io/evidenzmodell.html" property="og:url"/>
+  <meta content="https://repairprobe.github.io/assets/img/og-image.png" property="og:image"/>
+  <meta content="de_DE" property="og:locale"/>
+  <link href="https://repairprobe.github.io/evidenzmodell.html" rel="canonical"/>
+  <link href="assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="styles.css" rel="stylesheet"/>
+  <script type="application/ld+json">
+   {"@context": "https://schema.org", "@type": "WebSite", "name": "RepairProbe", "url": "https://repairprobe.github.io/", "inLanguage": "de", "description": "Wie RepairProbe Beobachtungen, Messungen, Quellen, Vermutungen und Bestätigungen nachvollziehbar trennen soll."}
+  </script>
+ </head>
+ <body>
+  <a class="skip-link" href="#inhalt">
+   Zum Inhalt springen
+  </a>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="RepairProbe Startseite">
-      <svg class="brand-mark" viewBox="0 0 420 420" aria-hidden="true" focusable="false">
-        <rect x="0" y="0" width="420" height="420" rx="76" fill="#F0F0F0"/>
-        <g fill="#6AC9D7">
-          <rect x="105" y="35" width="210" height="135"/>
-          <rect x="35" y="170" width="350" height="75"/>
-          <rect x="175" y="245" width="70" height="140"/>
-        </g>
-      </svg>
-      <span>RepairProbe</span>
+   <a aria-label="RepairProbe Startseite" class="brand" href="index.html">
+    <img alt="" height="42" src="assets/img/favicon.svg" width="42"/>
+    <span>
+     RepairProbe
+    </span>
+   </a>
+   <nav aria-label="Hauptnavigation">
+    <a href="index.html">
+     Start
     </a>
-    <nav aria-label="Hauptnavigation">
-      <a href="evidenzmodell.html" aria-current="page">Evidenzmodell</a>
-      <a href="roadmap.html">Fahrplan</a>
-      <a href="technical-baseline.html">Technische Basis</a>
-      <a class="nav-github" href="https://github.com/RepairProbe" title="Öffnet github.com in einem neuen Tab" target="_blank" rel="noopener">GitHub ↗</a>
-    </nav>
+    <a aria-current="page" href="evidenzmodell.html">
+     Prinzip
+    </a>
+    <a href="roadmap.html">
+     Projektstand
+    </a>
+    <a href="technical-baseline.html">
+     Technische Basis
+    </a>
+    <a href="index.html#kontakt">
+     Kontakt
+    </a>
+   </nav>
   </header>
-
   <main id="inhalt">
-
-    <section class="hero" aria-labelledby="hero-title">
+   <section class="page-hero">
+    <p class="eyebrow">
+     Prinzip &amp; Evidenzmodell
+    </p>
+    <h1 id="hero-title">
+     Was wissen wir wirklich?
+    </h1>
+    <p class="lede">
+     Bei einer Reparatur zählt nicht nur die Aussage. Es zählt auch, wie sie zustande gekommen ist. RepairProbe soll diese Herkunft bei jeder Information sichtbar halten.
+    </p>
+    <p class="status-line">
+     Architekturprinzip festgelegt · Vollständiger Ausbau geplant
+    </p>
+   </section>
+   <section class="section" id="klassen">
+    <h2 id="klassen-title">
+     Fünf Arten von Information.
+    </h2>
+    <div class="status-list">
+     <article>
+      <span class="mono">
+       OBSERVED
+      </span>
       <div>
-        <p class="hero-claim">Evidenzmodell <span class="dot" aria-hidden="true">●</span> Kern des Projekts</p>
-        <h1 id="hero-title">Fünf Evidenzklassen. Eine harte Grenze.</h1>
-        <p class="lede">Jede Information in einem Reparaturfall trägt eine Herkunft. Fünf Klassen trennen, was gesehen, gemessen, nachgeschlagen, vermutet und bestätigt wurde. Sie sind nicht austauschbar.</p>
-        <p class="honesty">Diese Klassen sind als Architekturentscheidung festgehalten (ADR-0002 im Kernrepository). Ihren technischen Ausbau plant das Projekt als erste Fördermaßnahme.</p>
+       <h3>
+        Beobachtet
+       </h3>
+       <p>
+        Was eine Person unmittelbar sieht oder feststellt. Im geplanten Radio-Beispiel: Beim Einschalten bleibt die Anzeige dunkel. Das sagt noch nichts über die Ursache aus.
+       </p>
       </div>
-      <aside class="panel-instrument" aria-label="Kurzregel">
-        <p class="panel-title">Grundregel</p>
-        <div class="status-rows">
-          <div><strong>INFERENCE</strong><span>ist Einordnung</span></div>
-          <div><strong>MEASUREMENT</strong><span>ist Messwert</span></div>
-          <div><strong>BEIDES</strong><span>bleibt getrennt</span></div>
-        </div>
-        <p class="panel-note">Inference is not Measurement</p>
-      </aside>
-    </section>
-
-    <section id="klassen" aria-labelledby="klassen-title">
-      <div class="section-head">
-        <span class="section-index" aria-hidden="true">01</span>
-        <h2 id="klassen-title">Die fünf Klassen mit Beispielen.</h2>
+     </article>
+     <article>
+      <span class="mono">
+       MEASURED
+      </span>
+      <div>
+       <h3>
+        Gemessen
+       </h3>
+       <p>
+        Ein Wert, der tatsächlich mit einem Messgerät erfasst wurde. Gerät, Messbedingungen und Herkunft gehören dazu. Eine KI darf einen fehlenden Wert weder erfinden noch aus einem Foto als Messung ableiten.
+       </p>
       </div>
-      <div class="protocol" aria-label="Fünf Evidenzklassen mit Beispielen">
-        <div class="protocol-row">
-          <span class="stamp observed">OBSERVED</span>
-          <p><strong>Gesehen.</strong> Direkt sichtbar oder von einer Person unmittelbar beobachtet.</p>
-          <p>Beispiel: Auf dem Foto ist der Deckel des Elkos gewölbt.</p>
-        </div>
-        <div class="protocol-row">
-          <span class="stamp measured">MEASURED</span>
-          <p><strong>Gemessen.</strong> Ein Wert, der tatsächlich mit einem Messgerät erfasst wurde.</p>
-          <p>Beispiel: Der Komponententester zeigt <span class="value">ESR = 3,6 Ω</span>.</p>
-        </div>
-        <div class="protocol-row">
-          <span class="stamp retrieved">RETRIEVED</span>
-          <p><strong>Nachgeschlagen.</strong> Aus einer technischen Quelle oder einem dokumentierten Reparaturfall abgerufen.</p>
-          <p>Beispiel: Das Servicehandbuch zeigt, dass D318 an der Sekundärkreis-Gleichrichtung hängt.</p>
-        </div>
-        <div class="protocol-row">
-          <span class="stamp inferred">INFERRED</span>
-          <p><strong>Vermutet.</strong> Eine Schlussfolgerung aus der vorhandenen Evidenz, zum Beispiel von der KI.</p>
-          <p>Beispiel: Der Elko ist ein Hauptverdächtiger. Bleibt eine Vermutung, solange nichts gemessen wurde.</p>
-        </div>
-        <div class="protocol-row">
-          <span class="stamp confirmed">CONFIRMED</span>
-          <p><strong>Bestätigt.</strong> Durch Gegenprobe, Bauteilprüfung oder Reparaturergebnis bestätigt.</p>
-          <p>Beispiel: D318 ist mit angehobener Leitung immer noch kurzschlüssig. Die Diode ist defekt.</p>
-        </div>
+     </article>
+     <article>
+      <span class="mono">
+       RETRIEVED
+      </span>
+      <div>
+       <h3>
+        Nachgeschlagen
+       </h3>
+       <p>
+        Eine Information aus einer Quelle, etwa einem Datenblatt oder einer Serviceunterlage. Sie braucht einen Herkunftsnachweis und muss zum jeweiligen Gerät passen.
+       </p>
       </div>
-    </section>
-
-    <section id="grenze" class="dark-section" aria-labelledby="grenze-title">
-      <div class="section-head">
-        <span class="section-index" aria-hidden="true">02</span>
-        <h2 id="grenze-title">Inference is not Measurement.</h2>
+     </article>
+     <article>
+      <span class="mono">
+       INFERRED
+      </span>
+      <div>
+       <h3>
+        Vermutet
+       </h3>
+       <p>
+        Eine Schlussfolgerung aus den bisherigen Informationen. Auch ein überzeugender KI-Hinweis bleibt eine Vermutung. Die Grundlage und offene Fragen sollen erkennbar sein.
+       </p>
       </div>
-      <div class="prose">
-        <p>Das Modell darf fehlende Messungen nicht simulieren und Vermutungen nicht stillschweigend zu Tatsachen befördern. Wer später in den Fall schaut, soll jeder Aussage ansehen, woher sie kommt.</p>
+     </article>
+     <article>
+      <span class="mono">
+       CONFIRMED
+      </span>
+      <div>
+       <h3>
+        Bestätigt
+       </h3>
+       <p>
+        Eine Aussage, die durch eine geeignete Gegenprobe, Bauteilprüfung oder ein nachvollziehbares Reparaturergebnis bestätigt wurde. Die Bestätigung braucht selbst einen Beleg.
+       </p>
       </div>
-      <div class="compare">
-        <div class="allowed">
-          <h3>Was ein Foto leisten darf</h3>
-          <ul>
-            <li>Gerätelabels und Bauteilbezeichnungen erkennen</li>
-            <li>Bauteilfamilien einordnen</li>
-            <li>sichtbare Schäden benennen</li>
-            <li>räumliche Zusammenhänge für die Führung nutzen</li>
-          </ul>
-        </div>
-        <div class="forbidden">
-          <h3>Was ein Foto nie liefern darf</h3>
-          <ul>
-            <li>ESR, Leckstrom, Kapazität, Widerstand</li>
-            <li>Rail-Spannungen</li>
-            <li>Halbleiterzustände</li>
-          </ul>
-        </div>
-      </div>
-      <p class="honesty">Diese Werte kommen nur aus echten Messungen, die eine Person oder ein Messgerät geliefert hat.</p>
-    </section>
-
-    <section id="unsicherheit" aria-labelledby="unsicherheit-title">
-      <div class="section-head">
-        <span class="section-index" aria-hidden="true">03</span>
-        <h2 id="unsicherheit-title">Unsicherheit bleibt sichtbar.</h2>
-      </div>
-      <div class="prose">
-        <p>Eine brauchbare Erklärung beschreibt, was bekannt ist, was erwartet wird, was abweicht und was weiterhin unklar ist. „U17 ersetzen“ ist keine Diagnose.</p>
-        <p>Wo kein Messgerät vorhanden ist, bleibt der Fall bei Beobachtung, Recherche und begründeter Wahrscheinlichkeit, und die Grenze wird ausdrücklich gekennzeichnet.</p>
-      </div>
-    </section>
-
-    <section id="sicherheit" class="dark-section" aria-labelledby="sicherheit-title">
-      <div class="section-head">
-        <span class="section-index" aria-hidden="true">04</span>
-        <h2 id="sicherheit-title">Anfängerfreundlich heißt nicht gefahrlos.</h2>
-      </div>
-      <div class="prose">
-        <p>Die Wissensbarriere soll sinken, die elektrische Sicherheitsbarriere nicht. Bei unbekannten oder gefährlichen Energiezuständen lehnt die Software riskante Schritte standardmäßig ab (fail-closed).</p>
-        <p>Sicherheitsregeln liegen außerhalb des Sprachmodells und können von ihm nicht überschrieben werden. Jede Empfehlung wird erklärt, bevor etwas passiert: explanation before action.</p>
-      </div>
-      <p class="honesty">Auch das ersetzt keine elektrische Sicherheitszertifizierung und keine Sorgfalt der Person am Gerät.</p>
-    </section>
-
-    <section id="ausblick" aria-labelledby="ausblick-title">
-      <div class="section-head">
-        <span class="section-index" aria-hidden="true">05</span>
-        <h2 id="ausblick-title">Der Ausbau ist Teil der Planung.</h2>
-      </div>
-      <div class="prose">
-        <p>Das Evidenzmodell wird im geplanten Förderumfang zur Repair-Case-Schicht ausgebaut: versionierte Fälle, Unsicherheitsregeln und technisch abgelehnte ungültige Übergänge.</p>
-      </div>
-      <div class="actions">
-        <a class="button primary" href="roadmap.html">Zum Fahrplan</a>
-        <a class="button" href="technical-baseline.html">Technische Basis</a>
-        <a class="button quiet" href="index.html">Zur Startseite</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
+     </article>
+    </div>
+   </section>
+   <section class="section principle" id="grenze">
     <div>
-      <strong>RepairProbe</strong><br>
-      Unabhängiges Open-Source-Projekt
+     <p class="eyebrow">
+      Die feste Grenze
+     </p>
+     <h2 id="grenze-title">
+      Eine Einordnung
+      <br/>
+      ersetzt keine Messung.
+     </h2>
+     <p>
+      Ein Foto kann sichtbare Schäden oder eine Bauteilbezeichnung zeigen. Elektrische Eigenschaften wie Kapazität, Widerstand oder Spannung lassen sich daraus nicht als echte Messwerte gewinnen.
+     </p>
     </div>
-    <div class="footer-links" aria-label="Weitere Links">
-      <a href="index.html">Startseite</a>
-      <a href="roadmap.html">Fahrplan</a>
-      <a href="technical-baseline.html">Technische Basis</a>
-      <a href="index.html#kontakt">Kontakt</a>
+    <div id="unsicherheit">
+     <h3 id="unsicherheit-title">
+      Unsicherheit gehört zum Ergebnis.
+     </h3>
+     <p>
+      Fehlt ein Messgerät, soll die Software bei Beobachtung, Recherche und begründeten Vermutungen bleiben. Eine Lücke wird benannt und nicht mit einem erfundenen Ergebnis gefüllt.
+     </p>
     </div>
-    <p style="margin:0">Keine Nutzungsverfolgung. Keine erfundenen Messwerte. Code lizenziert unter Apache-2.0.</p>
+   </section>
+   <section class="section split" id="sicherheit">
+    <div>
+     <p class="eyebrow">
+      Sicherheitsgrenzen
+     </p>
+     <h2 id="sicherheit-title">
+      Erst verstehen.
+      <br/>
+      Dann prüfen.
+     </h2>
+    </div>
+    <span aria-hidden="true" class="anchor-alias" id="ausblick-title">
+    </span>
+    <div class="prose" id="ausblick">
+     <p>
+      Der geplante Prototyp soll erklären, was bekannt ist, welche Frage ein Prüfschritt klärt und welche Voraussetzungen dafür nötig sind. Die Person bleibt verantwortlich für das reale Gerät und ihre Handlungen.
+     </p>
+     <p>
+      Feste Sicherheitsregeln sollen außerhalb des austauschbaren KI-Modells liegen. Gefährliche oder unbekannte Energiezustände müssen einen Schritt blockieren können. Die vorhandene passive Sicherheits-Baseline belegt noch keine Sicherheit eines vollständigen Reparaturablaufs.
+     </p>
+     <a class="text-link" href="technical-baseline.html">
+      Was die vorhandenen Tests tatsächlich belegen →
+     </a>
+    </div>
+   </section>
+  </main>
+  <footer>
+   <div>
+    <a class="brand" href="index.html">
+     RepairProbe
+    </a>
+    <p>
+     Unabhängiges Projekt von Raik Müller.
+    </p>
+   </div>
+   <div>
+    <a href="https://github.com/RepairProbe">
+     GitHub ↗
+    </a>
+    <br/>
+    <a href="mailto:repairprobe@gmail.com">
+     repairprobe@gmail.com
+    </a>
+   </div>
+   <p class="small">
+    Keine Nutzungsverfolgung. Schriften lokal gehostet.
+    <br/>
+    Code lizenziert unter Apache-2.0.
+   </p>
   </footer>
-</body>
+ </body>
 </html>

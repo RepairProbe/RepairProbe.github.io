@@ -6,7 +6,7 @@ No build step, runtime dependency, analytics, tracker, cookie or private CI is r
 
 ## Pages
 
-- `index.html` — identity, problem, approach, real workflow example, status, person, FAQ, contact
+- `index.html` — plain-language purpose, planned radio scenario, evidence principle, present/planned/later status, research, person, contact
 - `evidenzmodell.html` — the five evidence classes and the Inference-is-not-Measurement boundary
 - `roadmap.html` — public roadmap, funding-application status, planned scope, explicit limits
 - `technical-baseline.html` — pre-funding technical baseline and what it does not prove
@@ -25,4 +25,4 @@ Excluded from crawling via `robots.txt` (`/.zcode/`, `/website-arbeit/`).
 
 Serve locally (`python3 -m http.server 8111`), then run the bundled check: `python3 .zcode/skills/website-bauen/werkzeuge/pruefen.py http://localhost:8111`. See `AGENTS.md` for the full validation contract (contrast, keyboard, viewports, crawl, no third-party requests).
 
-Apache License 2.0, see [LICENSE](LICENSE). The canonical product repository additionally documents its own license at https://github.com/RepairProbe/repair-probe.
+Apache License 2.0, see [LICENSE](LICENSE). The canonical product repository is currently private; publication of the planned funded FOSS results is intended.
