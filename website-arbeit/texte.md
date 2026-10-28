@@ -213,9 +213,9 @@ Sicherheit
 Passive SafetyGate-Baseline
 Ein kleiner Satz fester Regeln begrenzt erlaubtes Softwareverhalten. Das ist ein Ausgangspunkt für spätere Sicherheitsprüfungen, keine Freigabe für Arbeiten an elektrischen Geräten.
 Aussagekraft der Tests
-24 Softwaretests.
+44 Softwaretests.
 Eine begrenzte Aussage.
-Die aktuelle Testsuite umfasst 24 bestandene Tests. Sie prüft die Softwarebausteine, ungültige Eingaben und die Repository-Verträge. Drei erfundene Beispiele zeigen, dass Messereignisse bei Speicherung, Wiederholung und erneutem Einlesen erhalten bleiben. Fehlende Werte bleiben als fehlend erkennbar. Beobachtungen, Quellen und Vermutungen sind dabei getrennte Testkarten, noch kein vollständiger Reparaturfall. Die Software erkennt inhaltliche Quellenwidersprüche noch nicht selbst. Die Tests belegen weder reale Messgenauigkeit noch KI-Diagnosequalität oder Reparaturerfolg.
+Die aktuelle Testsuite umfasst 44 bestandene Tests. Sie prüft die Softwarebausteine, ungültige Eingaben und die Repository-Verträge. Drei erfundene Beispiele zeigen, dass Messereignisse bei Speicherung, Wiederholung und erneutem Einlesen erhalten bleiben. Fehlende Werte bleiben als fehlend erkennbar. Beobachtungen, Quellen und Vermutungen sind dabei getrennte Testkarten, noch kein vollständiger Reparaturfall. Die Software erkennt inhaltliche Quellenwidersprüche noch nicht selbst. Die Tests belegen weder reale Messgenauigkeit noch KI-Diagnosequalität oder Reparaturerfolg.
 Noch nicht vorhanden
 Smartphone-Erfassung, dauerhaft gespeicherte Reparaturfälle, geführte Diagnose, eine ausgebaute Quellenanbindung und ein offenes Austauschpaket gehören zur geplanten Entwicklung.
 Den geplanten Umfang ansehen →
