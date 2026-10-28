@@ -11,7 +11,7 @@ Kontakt
 Zum Inhalt springen
 Unabhängiges Projekt von Raik Müller.
 Keine Nutzungsverfolgung. Schriften lokal gehostet.
-Code lizenziert unter Apache-2.0.
+Website-Code: Apache-2.0. Produktcode derzeit privat; FOSS-Veröffentlichung geplant.
 GitHub ↗
 
 ## index.html
@@ -22,11 +22,11 @@ Beschreibung: RepairProbe entwickelt offene Reparaturhilfe für Elektronik: Quel
 Offene Software für die Elektronikreparatur
 Reparieren beginnt
 mit Verstehen.
-RepairProbe soll Menschen beim Reparieren elektronischer Geräte helfen: verstreute Informationen einordnen und erkennen, was geprüft wurde und was noch Vermutung ist.
+RepairProbe soll Ehrenamtlichen in Repair-Cafés und offenen Werkstätten helfen, einen Elektronikfehler zu prüfen. In einem geplanten Reparaturfall sollen Hinweise zum Gerät, eigene Beobachtungen und Messungen nachvollziehbar bleiben.
+In Entwicklung · Kleine technische Basis vorhanden · Noch keine fertige App
 Den geplanten Ablauf ansehen
 ↓
 Projektstand &amp; Fahrplan →
- In Entwicklung · Kleine technische Basis vorhanden · Noch keine fertige App
 Die Idee an einem Beispiel
 Das Radio bleibt stumm.
 Eine Anleitung hier, ein Hinweis im Forum dort. Aber was passt zum eigenen Gerät? Und was wurde tatsächlich überprüft?
@@ -58,11 +58,12 @@ Der Prototyp soll erklären, warum ein Schritt sinnvoll ist und welche Vorausset
 06
 Den Verlauf nachvollziehen
 Neue Ergebnisse sollen in einem lokalen Reparaturfall erhalten bleiben. Die Person entscheidet über eine spätere Weitergabe.
-Arbeiten an Netzspannung sind kein vorgesehener Anwendungsbereich für Einsteiger. Die geplante Assistenz ersetzt keine Fachkenntnis.
+Geöffnete Netzgeräte, Lithium-Akkupacks und spannungsführende Schaltungen sind keine Einsteigerfälle. Die geplante Assistenz ersetzt keine Fachkenntnis und keine Sicherheitsfreigabe.
 Das Produktprinzip
 Eine plausible Antwort
 ist noch kein Messwert.
 Eine KI kann Hinweise einordnen und Erklärungen formulieren. RepairProbe soll dabei jede Aussage mit ihrer Herkunft verbinden. Beobachtungen, echte Messwerte, Quellen und Vermutungen bleiben unterscheidbar.
+Anders als ein ChatGPT-Gespräch oder eine Anleitung soll der geplante Reparaturfall diese Unterschiede auch nach dem Speichern und Weitergeben erhalten. Ob das im Alltag hilft, muss erst geprüft werden.
 Die fünf Informationsarten verstehen →
 Beobachtet
  Das Radio zeigt keine Reaktion.
