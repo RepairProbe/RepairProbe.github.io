@@ -2,7 +2,7 @@
 
 > RepairProbe soll Menschen beim Reparieren elektronischer Geräte helfen: verstreute Informationen einordnen und erkennen, was geprüft wurde und was noch Vermutung ist.
 
-Unabhängiges Projekt von Raik Müller. Vorhanden ist eine kleine Software-Baseline mit Messereignisformat, Validator, Mock-Adapter, anfügbarem Evidenzspeicher, reproduzierbarem Replay, passiver Safety-Baseline und vier Tests. Keine fertige Diagnose-App. Die Tests belegen Softwareverhalten, keine reale Messgenauigkeit, KI-Qualität oder Reparaturwirkung.
+Unabhängiges Projekt von Raik Müller. Vorhanden ist eine kleine Software-Baseline mit Messereignisformat, Validator, Mock-Adapter, anfügbarem Evidenzspeicher, reproduzierbarem Replay, begrenzter Safety-Baseline und 24 bestandenen Softwaretests. Drei synthetische Fälle prüfen Speicherung, Wiederholung und erneutes Einlesen von Messereignissen. Inhaltliche Quellenkonflikte werden noch nicht automatisch erkannt. Keine fertige Diagnose-App. Die Tests belegen Softwareverhalten, keine reale Messgenauigkeit, KI-Qualität oder Reparaturwirkung.
 
 Geplant ist ein FOSS-Prototyp mit Smartphone-Erfassung, lokalem Reparaturfall, nachvollziehbaren Quellen, optionalen echten Messwerten und begründeten Prüfschritten. Beobachtung (OBSERVED), Messung (MEASURED), Quelle (RETRIEVED), Vermutung (INFERRED) und Bestätigung (CONFIRMED) bleiben getrennt. Keine eigene Messhardware oder verpflichtende RepairProbe-Cloud. Das Produktrepository ist derzeit privat; die geförderten Ergebnisse sollen öffentlich werden.
 

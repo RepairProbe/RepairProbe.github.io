@@ -76,7 +76,7 @@ Was da ist. Was entstehen soll.
 Die technische Basis →
 Vorhanden
 Eine kleine technische Software-Basis
-Sie prüft und speichert Messereignisse und kann vorbereitete Abläufe reproduzieren. Vier Tests prüfen dieses Softwareverhalten. Eine nutzbare Diagnose-App ist das noch nicht.
+Sie prüft und speichert Messereignisse und kann vorbereitete Abläufe reproduzieren. Automatisierte Tests prüfen dieses Softwareverhalten. Eine nutzbare Diagnose-App ist das noch nicht.
 Geplant
 Ein nutzbarer, offener Prototyp
 Fotos und Beobachtungen erfassen, Quellen und Messwerte einordnen, einen Reparaturverlauf erhalten und Prüfschritte verständlich erklären. Dafür sind 850 Arbeitsstunden über sechs Monate vorgesehen.
@@ -152,7 +152,7 @@ Bewerbung beim Prototype Fund in Vorbereitung · Noch nicht eingereicht · Nicht
 Heute
 Der Anfang ist technisch.
 Der nächste Schritt wird praktisch.
-Vorhanden sind ein Format für Messereignisse, Prüfregeln, ein Testadapter, ein anfügbarer Evidenzspeicher, reproduzierbare Testabläufe und eine passive Sicherheits-Baseline. Vier Tests prüfen diese Bausteine ohne echte Hardware oder KI-Modell.
+Vorhanden sind ein Format für Messereignisse, Prüfregeln, ein Testadapter, ein anfügbarer Evidenzspeicher, reproduzierbare Testabläufe und eine passive Sicherheits-Baseline. Die Tests prüfen diese Bausteine ohne echte Hardware oder KI-Modell.
 Die Smartphone-Erfassung, ein dauerhaft gespeicherter Reparaturfall und die geführte Diagnose sind noch nicht gebaut.
 Die vorhandene Basis im Detail →
 Während einer möglichen Förderung geplant
@@ -213,9 +213,9 @@ Sicherheit
 Passive SafetyGate-Baseline
 Ein kleiner Satz fester Regeln begrenzt erlaubtes Softwareverhalten. Das ist ein Ausgangspunkt für spätere Sicherheitsprüfungen, keine Freigabe für Arbeiten an elektrischen Geräten.
 Aussagekraft der Tests
-Vier Tests.
+24 Softwaretests.
 Eine begrenzte Aussage.
-Die vier Baseline-Tests prüfen das Verhalten dieser Softwarebausteine. Insgesamt umfasst die aktuelle Testsuite elf Tests: vier Baseline-Tests einschließlich Replay und Sicherheitsregeln sowie sieben Prüfungen der Repository-Verträge. Sie sind kein Nachweis für Messgenauigkeit realer Geräte, Bildverständnis oder KI-Diagnosequalität.
+Die aktuelle Testsuite umfasst 24 bestandene Tests. Sie prüft die Softwarebausteine, ungültige Eingaben und die Repository-Verträge. Drei erfundene Beispiele zeigen, dass Messereignisse bei Speicherung, Wiederholung und erneutem Einlesen erhalten bleiben. Fehlende Werte bleiben als fehlend erkennbar. Beobachtungen, Quellen und Vermutungen sind dabei getrennte Testkarten, noch kein vollständiger Reparaturfall. Die Software erkennt inhaltliche Quellenwidersprüche noch nicht selbst. Die Tests belegen weder reale Messgenauigkeit noch KI-Diagnosequalität oder Reparaturerfolg.
 Noch nicht vorhanden
 Smartphone-Erfassung, dauerhaft gespeicherte Reparaturfälle, geführte Diagnose, eine ausgebaute Quellenanbindung und ein offenes Austauschpaket gehören zur geplanten Entwicklung.
 Den geplanten Umfang ansehen →
