@@ -1,322 +1,423 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Quelloffene Reparaturdiagnose in Entwicklung: Beobachtungen, echte Messwerte, Quellen und Vermutungen bleiben getrennt. Projektstatus öffentlich dokumentiert.">
-  <meta name="theme-color" content="#f1f1ee">
-  <meta property="og:title" content="RepairProbe – Gemessen ist nur, was wirklich gemessen wurde.">
-  <meta property="og:description" content="Quelloffene Reparaturdiagnose in Entwicklung. Beobachtung, Messung, Quelle und Vermutung bleiben getrennt.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://repairprobe.github.io/">
-  <meta property="og:image" content="https://repairprobe.github.io/assets/img/og-image.png">
-  <meta property="og:locale" content="de_DE">
-  <link rel="canonical" href="https://repairprobe.github.io/">
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-  <title>RepairProbe – Reparaturdiagnose mit klaren Belegen</title>
-  <link rel="stylesheet" href="styles.css">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Reparieren beginnt mit Verstehen. | RepairProbe
+  </title>
+  <meta content="RepairProbe entwickelt offene Reparaturhilfe für Elektronik: Quellen einordnen, echte Messungen und Vermutungen unterscheiden. Prototyp geplant." name="description"/>
+  <meta content="#f6f7f4" name="theme-color"/>
+  <meta content="Reparieren beginnt mit Verstehen. | RepairProbe" property="og:title"/>
+  <meta content="RepairProbe entwickelt offene Reparaturhilfe für Elektronik: Quellen einordnen, echte Messungen und Vermutungen unterscheiden. Prototyp geplant." property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://repairprobe.github.io/" property="og:url"/>
+  <meta content="https://repairprobe.github.io/assets/img/og-image.png" property="og:image"/>
+  <meta content="de_DE" property="og:locale"/>
+  <link href="https://repairprobe.github.io/" rel="canonical"/>
+  <link href="assets/img/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
+  <link href="styles.css" rel="stylesheet"/>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://repairprobe.github.io/#org",
-        "name": "RepairProbe",
-        "url": "https://repairprobe.github.io/",
-        "logo": "https://repairprobe.github.io/assets/img/favicon-512.png",
-        "email": "repairprobe@gmail.com",
-        "founder": { "@type": "Person", "name": "Raik Müller" },
-        "description": "Unabhängiges Open-Source-Projekt für offene Software-Infrastruktur für smartphone-gestützte, KI-geführte Elektronikdiagnose.",
-        "knowsLanguage": "de",
-        "sameAs": ["https://github.com/RepairProbe"]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://repairprobe.github.io/#fragen",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Ist RepairProbe eine fertige App?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Nein. Es gibt eine kleine, geprüfte technische Basis im Kernrepository. Es ist derzeit privat; die Veröffentlichung ist geplant. Die Smartphone-App und die geführte Fehlersuche sind ohnehin erst Planung und noch nicht gebaut." }
-          },
-          {
-            "@type": "Question",
-            "name": "Brauche ich spezielle Messhardware von RepairProbe?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Nein. RepairProbe ist reine Software und passt sich den Werkzeugen an, die vorhanden sind. Ein Multimeter oder Komponententester liefert zusätzliche Messwerte, nötig ist das nicht." }
-          },
-          {
-            "@type": "Question",
-            "name": "Darf die KI bei RepairProbe Messwerte erfinden?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Nein. KI-Ausgaben sind Einordnungen und bleiben als solche markiert. Messwerte kommen nur von echten Messgeräten und von Menschen. Diese Grenze ist im Projekt eine Grundregel: Inference is not Measurement." }
-          },
-          {
-            "@type": "Question",
-            "name": "Ist die Förderung schon bewilligt?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Nein. Ein Antrag zum Prototype Fund ist in Vorbereitung. Eingereicht ist er noch nicht, bewilligt ist nichts." }
-          },
-          {
-            "@type": "Question",
-            "name": "Wie kann ich Feedback geben oder mitmachen?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Schreib eine Mail an repairprobe@gmail.com oder schau auf GitHub vorbei. Rückmeldung aus Repair-Cafés und aus der praktischen Reparatur ist ausdrücklich willkommen." }
-          }
-        ]
-      }
-    ]
-  }
+   {"@context": "https://schema.org", "@type": "WebSite", "name": "RepairProbe", "url": "https://repairprobe.github.io/", "inLanguage": "de", "description": "RepairProbe entwickelt offene Reparaturhilfe für Elektronik: Quellen einordnen, echte Messungen und Vermutungen unterscheiden. Prototyp geplant."}
   </script>
-</head>
-<body>
-  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
-
+ </head>
+ <body>
+  <a class="skip-link" href="#inhalt">
+   Zum Inhalt springen
+  </a>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="RepairProbe Startseite">
-      <svg class="brand-mark" viewBox="0 0 420 420" aria-hidden="true" focusable="false">
-        <rect x="0" y="0" width="420" height="420" rx="76" fill="#F0F0F0"/>
-        <g fill="#6AC9D7">
-          <rect x="105" y="35" width="210" height="135"/>
-          <rect x="35" y="170" width="350" height="75"/>
-          <rect x="175" y="245" width="70" height="140"/>
-        </g>
-      </svg>
-      <span>RepairProbe</span>
+   <a aria-label="RepairProbe Startseite" class="brand" href="index.html">
+    <img alt="" height="42" src="assets/img/favicon.svg" width="42"/>
+    <span>
+     RepairProbe
+    </span>
+   </a>
+   <nav aria-label="Hauptnavigation">
+    <a aria-current="page" href="index.html">
+     Start
     </a>
-    <nav aria-label="Hauptnavigation">
-      <a href="evidenzmodell.html">Evidenzmodell</a>
-      <a href="roadmap.html">Fahrplan</a>
-      <a href="technical-baseline.html">Technische Basis</a>
-      <a class="nav-github" href="https://github.com/RepairProbe" title="Öffnet github.com in einem neuen Tab" target="_blank" rel="noopener">GitHub ↗</a>
-    </nav>
+    <a href="evidenzmodell.html">
+     Prinzip
+    </a>
+    <a href="roadmap.html">
+     Projektstand
+    </a>
+    <a href="technical-baseline.html">
+     Technische Basis
+    </a>
+    <a href="index.html#kontakt">
+     Kontakt
+    </a>
+   </nav>
   </header>
-
   <main id="inhalt">
-
-    <section class="hero" aria-labelledby="hero-title">
-      <div>
-        <p class="hero-claim">Reparaturdiagnose <span class="dot" aria-hidden="true">●</span> offen, in Entwicklung</p>
-        <h1 id="hero-title">Gemessen ist nur, was wirklich gemessen wurde.</h1>
-        <p class="lede">RepairProbe ist ein quelloffenes Projekt, das Reparaturdiagnose nachvollziehbar machen will. Beobachtungen, echte Messwerte, technische Quellen und KI-Einordnungen bleiben hier getrennt. So bleibt erkennbar, was bekannt ist und was nur vermutet wird.</p>
-        <p class="honesty">Noch in Entwicklung. Eine fertige App gibt es nicht. Alles hier ist öffentlich einsehbar.</p>
-        <div class="actions">
-          <a class="button primary" href="#ansatz">Den Ansatz verstehen</a>
-          <a class="button" href="#stand">Was heute existiert</a>
-          <a class="button quiet" href="https://github.com/RepairProbe" target="_blank" rel="noopener">Projekt auf GitHub ↗</a>
-        </div>
-      </div>
-      <aside class="panel-instrument" aria-label="Projektstatus">
-        <p class="panel-title">Status</p>
-        <div class="status-rows">
-          <div><strong>BASELINE</strong><span class="ok">vorhanden</span></div>
-          <div><strong>APP</strong><span>in Planung</span></div>
-          <div><strong>ANTRAG</strong><span>in Vorbereitung</span></div>
-          <div><strong>FÖRDERUNG</strong><span>nicht bewilligt</span></div>
-        </div>
-        <p class="panel-note">Stand 10.10.2026</p>
-      </aside>
-    </section>
-
-    <section id="problem" aria-labelledby="problem-title">
-      <div class="section-head">
-        <span class="section-index" aria-hidden="true">01</span>
-        <h2 id="problem-title">Reparieren scheitert selten am Löten. Meist fehlt das passende Wissen.</h2>
-      </div>
-      <div class="split">
-        <div class="prose">
-          <p>Ein defektes Gerät stellt Fragen, die sich nicht per Foto beantworten lassen. Welche Spannung ist hier normal? Welche Bauteile fallen bei diesem Modell öfter aus? Wie kommt man überhaupt an die betreffende Stelle? Und welches Ersatzteil passt?</p>
-          <p>Diese Informationen liegen verstreut: in Datenblättern, Schaltplänen, Forumbeiträgen und im Kopf erfahrener Menschen. Wer sie nicht findet oder nicht verbinden kann, bricht ab oder entsorgt ein Gerät, das zu retten gewesen wäre.</p>
-        </div>
-        <div class="prose">
-          <p>Das Open Repair Alliance berichtet in seinem Jahresbericht 2024 über 18.921 dokumentierte Entsorgungsfälle mit Hindernis: In 12 Prozent der Fälle fehlte die Reparaturinformation, in 10 Prozent fehlten Werkzeug oder Messgerät.</p>
-          <p><a href="https://openrepair.org/wp-content/uploads/2024/10/ORA-report-2024-The-rise-of-community-repair.pdf" target="_blank" rel="noopener">Bericht des Open Repair Alliance 2024 (englisch, PDF) ↗</a></p>
-        </div>
-      </div>
-    </section>
-
-    <section id="ansatz" aria-labelledby="ansatz-title">
-      <div class="section-head">
-        <span class="section-index" aria-hidden="true">02</span>
-        <h2 id="ansatz-title">Beobachtung, Messung, Quelle und Vermutung bleiben getrennt.</h2>
-      </div>
-      <div class="prose">
-        <p>RepairProbe führt diese Arten von Information in einem Repair Case zusammen, einem nachvollziehbaren Reparaturfall. Der Kern des Projekts ist eine harte Grenze:</p>
-        <div class="callout">
-          <p style="margin:0"><strong>Eine KI darf einordnen und Vermutungen bilden. Sie darf keine Messwerte erfinden.</strong> Was gemessen wurde, steht im Fall. Was nur vermutet wird, ist als Vermutung markiert.</p>
-        </div>
-        <p>Ein Foto darf zum Beispiel nie einen ESR-Wert erfinden. Es darf aber begründet sagen: Dieser Elko ist ein hochpriorisierter Prüfkandidat. Die Entscheidung, was geprüft wird, bleibt bei der reparierenden Person. Die Sicherheit bleibt eine Sache der Software, nicht des Sprachmodells: gefährliche oder unbekannte Energiezustände führen zu einer klaren Ablehnung, nicht zu einer Wagnis-Empfehlung.</p>
-      </div>
-      <div class="protocol" aria-label="Die fünf Evidenzklassen im Überblick">
-        <div class="protocol-row">
-          <span class="stamp observed">OBSERVED</span>
-          <p><strong>Gesehen.</strong> Direkt sichtbar oder von einer Person beobachtet.</p>
-        </div>
-        <div class="protocol-row">
-          <span class="stamp measured">MEASURED</span>
-          <p><strong>Gemessen.</strong> Tatsächlich mit einem Messgerät erfasst.</p>
-        </div>
-        <div class="protocol-row">
-          <span class="stamp retrieved">RETRIEVED</span>
-          <p><strong>Nachgeschlagen.</strong> Aus Schaltplan, Datenblatt oder Reparaturfall.</p>
-        </div>
-        <div class="protocol-row">
-          <span class="stamp inferred">INFERRED</span>
-          <p><strong>Vermutet.</strong> Von der KI aus vorhandenen Hinweisen abgeleitet.</p>
-        </div>
-        <div class="protocol-row">
-          <span class="stamp confirmed">CONFIRMED</span>
-          <p><strong>Bestätigt.</strong> Durch Gegenprobe, Bauteilprüfung oder gelungene Reparatur.</p>
-        </div>
-      </div>
-      <div class="actions">
-        <a class="button primary" href="evidenzmodell.html">Das Evidenzmodell im Detail ansehen</a>
-      </div>
-    </section>
-
-    <section id="fall" class="dark-section" aria-labelledby="fall-title">
-      <div class="section-head">
-        <span class="section-index" aria-hidden="true">03</span>
-        <h2 id="fall-title">Ein Fernseher, der nicht mehr angeht.</h2>
-      </div>
-      <p class="honesty">Dieser Ablauf ist in der Entwicklungsarbeit real so durchlaufen worden. Er zeigt, wie das Projekt Reparatur versteht. Die App dafür existiert noch nicht.</p>
-      <div class="protocol" aria-label="Reparaturablauf als Protokoll">
-        <div class="protocol-row">
-          <span class="stamp observed">OBSERVED</span>
-          <p>Fotos vom Netzteil-Board und eine Beschreibung des Fehlers: der Fernseher bleibt schwarz.</p>
-        </div>
-        <div class="protocol-row">
-          <span class="stamp retrieved">RETRIEVED</span>
-          <p>Zu diesem Board bekannte Fehlerinformationen recherchieren, zum Beispiel zur Gleichrichtung im Sekundärkreis.</p>
-        </div>
-        <div class="protocol-row">
-          <span class="stamp inferred">INFERRED</span>
-          <p>Die Diode wird zum höchsten Prüfkandidaten erklärt. Das ist eine Einordnung, kein Messergebnis.</p>
-        </div>
-        <div class="protocol-row">
-          <span class="stamp measured">MEASURED</span>
-          <p>Ein Mensch führt den Diodentest durch. Der Wert kommt vom Messgerät, nicht vom Modell.</p>
-        </div>
-        <div class="protocol-row">
-          <span class="stamp confirmed">CONFIRMED</span>
-          <p>Mit angehobener Leitung bestätigt der Test den Kurzschluss. Die Vermutung wird zum belegten Befund.</p>
-        </div>
-        <div class="protocol-row">
-          <span class="stamp inferred">INFERRED</span>
-          <p>Weil das Netzteil diese Bauart hat, werden die umliegenden Elkos als nächste Prüfkandidaten priorisiert.</p>
-        </div>
-        <div class="protocol-row">
-          <span class="stamp measured">MEASURED</span>
-          <p>Kapazität und ESR werden extern gemessen und in den Fall zurückgeschrieben.</p>
-        </div>
-      </div>
-      <p>Jeder Eintrag trägt seine Herkunft im Fall. Wer später weitermacht, sieht genau, was belegt ist und was Vermutung blieb.</p>
-    </section>
-
-    <section id="stand" aria-labelledby="stand-title">
-      <div class="section-head">
-        <span class="section-index" aria-hidden="true">04</span>
-        <h2 id="stand-title">Was heute existiert. Was Hypothese bleibt.</h2>
-      </div>
-      <div class="inventory">
-        <div>
-          <h3 class="inventory-title"><span class="stamp solid">VORHANDEN</span></h3>
-          <ul>
-            <li><strong>Geprüfter Messereignis-Vertrag</strong> Repair Measurement Event v1 mit fail-closed Validierung.</li>
-            <li><strong>Evidence Store und Replay</strong> Nur anfügbare (append-only) Ablage und deterministisches Fixture-Replay für reproduzierbare Tests.</li>
-            <li><strong>Passive Safety-Baseline</strong> Lehnt unsichere Aktionen standardmäßig ab.</li>
-            <li><strong>Vier Baseline-Tests</strong> Ausführbar ohne Hardware, ohne Konto, ohne Cloud.</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="inventory-title"><span class="stamp inferred">OFFEN</span></h3>
-          <ul>
-            <li><strong>Die Smartphone-App</strong> Foto-Eingabe und geführte Fehlersuche sind noch nicht gebaut.</li>
-            <li><strong>Die Wirkung</strong> Ob der Ansatz Reparaturen tatsächlich erleichtert, muss mit echten Fällen gezeigt werden. Diese Wirkung ist bisher nicht belegt.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="prose" style="margin-top:2.2rem">
-        <h3>Erste Rückmeldung aus der Praxis</h3>
-        <p>Eine Person hat einen Fragebogen beantwortet (n=1, explorativ). Davon getrennt hat eine weitere Person einem Gespräch zugestimmt; ein Termin ist noch nicht vereinbart. Das ist keine Partnerschaft und keine Pilotzusage.</p>
-        <p>Diese eine Antwort bewertet Smartphone-Unterstützung als eher hilfreich und nennt Reparaturinformationen, Ersatzteile und den Zugang zum Gerät als wichtige Hürden. Unklarheit darüber, welcher Prüfschritt als Nächstes sinnvoll ist, und verlorener Reparaturkontext wurden darin als selten berichtet. Begrenzte KI-Hilfe beim Einordnen von Fotos und Zusammenfassen des Verlaufs wurde akzeptiert. Das ist keine Produktvalidierung.</p>
-        <p class="honesty">Ein Fragebogen, n=1, explorativ; ein separates Gesprächsinteresse ohne vereinbarten Termin. Keine Partnerschaft, keine Pilotzusage, keine Empfehlung.</p>
-      </div>
-      <div class="actions">
-        <a class="button primary" href="roadmap.html">Fahrplan ansehen</a>
-        <a class="button" href="technical-baseline.html">Technische Basis</a>
-      </div>
-    </section>
-
-    <section id="person" class="person" aria-labelledby="person-title">
-      <div class="section-head">
-        <span class="section-index" aria-hidden="true">05</span>
-        <h2 id="person-title">Ich bin Raik Müller.</h2>
-      </div>
-      <div class="split">
-        <div>
-          <p class="role-line">39+ Jahre jung 😜</p>
-          <p class="prose">Mein Hintergrund liegt im technischen/CNC-Bereich. Ich beschäftige mich praktisch mit Reparatur, Elektronik, Software und Automatisierung.</p>
-        </div>
-        <div class="prose">
-          <p>Reparieren hat mich schon interessiert, lange bevor es KI-Werkzeuge gab. Die eigentliche Hürde war selten die Arbeit am Gerät. Sie war, die richtigen Informationen zu finden und zu verbinden: Forumsbeiträge, Datenblätter, Serviceunterlagen, Messwerte und Erfahrung anderer. Genau daran setzt RepairProbe an.</p>
-          <p><strong>Mein Ziel mit RepairProbe:</strong> Fehlersuche verständlicher machen, damit leichter erkennbar ist, was wirklich bekannt ist, was nur vermutet wird und was als Nächstes sinnvoll geprüft werden sollte.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="fragen" aria-labelledby="fragen-title">
-      <div class="section-head">
-        <span class="section-index" aria-hidden="true">06</span>
-        <h2 id="fragen-title">Häufige Fragen</h2>
-      </div>
-      <div class="faq">
-        <details>
-          <summary>Ist RepairProbe eine fertige App?</summary>
-          <p>Nein. Es gibt eine kleine, geprüfte technische Basis im Kernrepository. Es ist derzeit privat; die Veröffentlichung ist geplant. Die Smartphone-App und die geführte Fehlersuche sind ohnehin erst Planung und noch nicht gebaut.</p>
-        </details>
-        <details>
-          <summary>Brauche ich spezielle Messhardware von RepairProbe?</summary>
-          <p>Nein. RepairProbe ist reine Software und passt sich den Werkzeugen an, die vorhanden sind. Ein Multimeter oder Komponententester liefert zusätzliche Messwerte, nötig ist das nicht.</p>
-        </details>
-        <details>
-          <summary>Darf die KI bei RepairProbe Messwerte erfinden?</summary>
-          <p>Nein. KI-Ausgaben sind Einordnungen und bleiben als solche markiert. Messwerte kommen nur von echten Messgeräten und von Menschen. Diese Grenze ist im Projekt eine Grundregel: Inference is not Measurement.</p>
-        </details>
-        <details>
-          <summary>Ist die Förderung schon bewilligt?</summary>
-          <p>Nein. Ein Antrag zum Prototype Fund ist in Vorbereitung. Eingereicht ist er noch nicht, bewilligt ist nichts.</p>
-        </details>
-        <details>
-          <summary>Wie kann ich Feedback geben oder mitmachen?</summary>
-          <p>Schreib eine Mail an <a href="mailto:repairprobe@gmail.com">repairprobe@gmail.com</a> oder schau auf <a href="https://github.com/RepairProbe" target="_blank" rel="noopener">GitHub</a> vorbei. Rückmeldung aus Repair-Cafés und aus der praktischen Reparatur ist ausdrücklich willkommen.</p>
-        </details>
-      </div>
-    </section>
-
-    <section id="kontakt" aria-labelledby="kontakt-title">
-      <div class="section-head">
-        <span class="section-index" aria-hidden="true">07</span>
-        <h2 id="kontakt-title">Fragen oder Hinweise?</h2>
-      </div>
-      <div class="contact-actions">
-        <a class="button primary" href="mailto:repairprobe@gmail.com">repairprobe@gmail.com</a>
-        <a class="button" href="https://github.com/RepairProbe" target="_blank" rel="noopener">Projekt auf GitHub ↗</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
+   <section class="hero">
     <div>
-      <strong>RepairProbe</strong><br>
-      Unabhängiges Open-Source-Projekt
+     <p class="eyebrow">
+      Offene Software für die Elektronikreparatur
+     </p>
+     <h1 id="hero-title">
+      Reparieren beginnt
+      <br/>
+      mit Verstehen.
+     </h1>
+     <p class="lede">
+      RepairProbe soll Menschen beim Reparieren elektronischer Geräte helfen: verstreute Informationen einordnen und erkennen, was geprüft wurde und was noch Vermutung ist.
+     </p>
+     <div class="actions">
+      <a class="button primary" href="#beispiel">
+       Den geplanten Ablauf ansehen
+       <span aria-hidden="true">
+        ↓
+       </span>
+      </a>
+      <a class="text-link" href="roadmap.html">
+       Projektstand &amp; Fahrplan →
+      </a>
+     </div>
+     <p class="status-line">
+      <span aria-hidden="true" class="status-dot">
+      </span>
+      In Entwicklung · Kleine technische Basis vorhanden · Noch keine fertige App
+     </p>
     </div>
-    <div class="footer-links" aria-label="Weitere Links">
-      <a href="evidenzmodell.html">Evidenzmodell</a>
-      <a href="roadmap.html">Fahrplan</a>
-      <a href="technical-baseline.html">Technische Basis</a>
-      <a href="#kontakt">Kontakt</a>
+    <aside class="hero-note">
+     <span class="note-label">
+      Die Idee an einem Beispiel
+     </span>
+     <div aria-hidden="true" class="radio">
+      <div class="radio-dial">
+      </div>
+      <div class="radio-speaker">
+      </div>
+      <div class="radio-knob">
+      </div>
+     </div>
+     <h2>
+      Das Radio bleibt stumm.
+     </h2>
+     <p>
+      Eine Anleitung hier, ein Hinweis im Forum dort. Aber was passt zum eigenen Gerät? Und was wurde tatsächlich überprüft?
+     </p>
+     <p class="note-caption">
+      Geplantes Nutzungsszenario, keine Produktoberfläche.
+     </p>
+    </aside>
+   </section>
+   <section class="section split" id="problem">
+    <div>
+     <p class="eyebrow">
+      Das Problem
+     </p>
+     <h2 id="problem-title">
+      Informationen gibt es viele.
+      <br/>
+      Der Zusammenhang fehlt oft.
+     </h2>
     </div>
-    <p style="margin:0">Keine Nutzungsverfolgung. Keine erfundenen Messwerte. Code lizenziert unter Apache-2.0.</p>
+    <div class="prose">
+     <p>
+      Bei einer Reparatur verteilt sich das Wissen auf Schaltpläne, Datenblätter, Foren und persönliche Erfahrung. Das passende Material zu finden kostet Zeit. Auch der Zugang zum Gerät und die Suche nach Ersatzteilen können aufhalten.
+     </p>
+     <p>
+      RepairProbe soll diese Informationen mit dem konkreten Gerät und dem bisherigen Reparaturverlauf verbinden. Die reparierende Person soll nachvollziehen können, woher eine Aussage kommt und wie sicher sie ist.
+     </p>
+    </div>
+   </section>
+   <span aria-hidden="true" class="anchor-alias" id="fall">
+   </span>
+   <section class="section scenario" id="beispiel">
+    <div class="section-heading">
+     <div>
+      <p class="eyebrow">
+       So könnte es künftig funktionieren
+      </p>
+      <h2 id="fall-title">
+       Ein Radio geht nicht mehr an. Was nun?
+      </h2>
+     </div>
+     <span class="tag">
+      Geplant
+     </span>
+    </div>
+    <p class="intro">
+     Dieses Beispiel erklärt den vorgesehenen Ablauf. Es zeigt keine bereits verfügbare App und ist keine Reparaturanleitung.
+    </p>
+    <ol class="steps">
+     <li>
+      <span class="step-no">
+       01
+      </span>
+      <div>
+       <h3>
+        Gerät und Problem erfassen
+       </h3>
+       <p>
+        Die Person hält das Modell, ein Foto und das Fehlerbild fest: Das Radio reagiert beim Einschalten nicht.
+       </p>
+      </div>
+     </li>
+     <li>
+      <span class="step-no">
+       02
+      </span>
+      <div>
+       <h3>
+        Passende Informationen finden
+       </h3>
+       <p>
+        RepairProbe soll bei der Einordnung gerätespezifischer Quellen helfen. Woher ein Hinweis stammt und ob er zum Gerät passt, bleibt sichtbar.
+       </p>
+      </div>
+     </li>
+     <li>
+      <span class="step-no">
+       03
+      </span>
+      <div>
+       <h3>
+        Beobachtung und Messung trennen
+       </h3>
+       <p>
+        „Keine Anzeige“ ist eine Beobachtung. Ein mit einem vorhandenen Messgerät erfasster Wert ist eine Messung. Ein Foto ersetzt sie nicht.
+       </p>
+      </div>
+     </li>
+     <li>
+      <span class="step-no">
+       04
+      </span>
+      <div>
+       <h3>
+        Vermutungen sichtbar lassen
+       </h3>
+       <p>
+        Ein möglicher Fehler bleibt eine Vermutung, bis eine passende Prüfung ihn stützt oder widerlegt. Fehlende Informationen werden benannt.
+       </p>
+      </div>
+     </li>
+     <li>
+      <span class="step-no">
+       05
+      </span>
+      <div>
+       <h3>
+        Den nächsten Prüfschritt verstehen
+       </h3>
+       <p>
+        Der Prototyp soll erklären, warum ein Schritt sinnvoll ist und welche Voraussetzungen gelten. Bei gefährlichen oder unbekannten Energiezuständen soll er stoppen.
+       </p>
+      </div>
+     </li>
+     <li>
+      <span class="step-no">
+       06
+      </span>
+      <div>
+       <h3>
+        Den Verlauf nachvollziehen
+       </h3>
+       <p>
+        Neue Ergebnisse sollen in einem lokalen Reparaturfall erhalten bleiben. Die Person entscheidet über eine spätere Weitergabe.
+       </p>
+      </div>
+     </li>
+    </ol>
+    <p class="small">
+     Arbeiten an Netzspannung sind kein vorgesehener Anwendungsbereich für Einsteiger. Die geplante Assistenz ersetzt keine Fachkenntnis.
+    </p>
+   </section>
+   <section class="section principle" id="ansatz">
+    <div>
+     <p class="eyebrow">
+      Das Produktprinzip
+     </p>
+     <h2 id="ansatz-title">
+      Eine plausible Antwort
+      <br/>
+      ist noch kein Messwert.
+     </h2>
+     <p>
+      Eine KI kann Hinweise einordnen und Erklärungen formulieren. RepairProbe soll dabei jede Aussage mit ihrer Herkunft verbinden. Beobachtungen, echte Messwerte, Quellen und Vermutungen bleiben unterscheidbar.
+     </p>
+     <a class="text-link" href="evidenzmodell.html">
+      Die fünf Informationsarten verstehen →
+     </a>
+    </div>
+    <div class="evidence-preview">
+     <p>
+      <span>
+       Beobachtet
+      </span>
+      Das Radio zeigt keine Reaktion.
+     </p>
+     <p>
+      <span>
+       Nachgeschlagen
+      </span>
+      Ein Hinweis aus einer passenden Unterlage.
+     </p>
+     <p>
+      <span>
+       Vermutet
+      </span>
+      Eine mögliche Ursache, noch ungeprüft.
+     </p>
+     <p class="evidence-rule">
+      Eine Vermutung wird durch Wiederholung nicht zur Messung.
+     </p>
+    </div>
+   </section>
+   <span aria-hidden="true" class="anchor-alias" id="fragen">
+   </span>
+   <section class="section" id="stand">
+    <div class="section-heading">
+     <div>
+      <p class="eyebrow">
+       Ehrlicher Projektstand
+      </p>
+      <span aria-hidden="true" class="anchor-alias" id="fragen-title">
+      </span>
+      <h2 id="stand-title">
+       Was da ist. Was entstehen soll.
+      </h2>
+     </div>
+     <a class="text-link" href="technical-baseline.html">
+      Die technische Basis →
+     </a>
+    </div>
+    <div class="status-list">
+     <article>
+      <span class="tag available">
+       Vorhanden
+      </span>
+      <div>
+       <h3>
+        Eine kleine technische Software-Basis
+       </h3>
+       <p>
+        Sie prüft und speichert Messereignisse und kann vorbereitete Abläufe reproduzieren. Vier Tests prüfen dieses Softwareverhalten. Eine nutzbare Diagnose-App ist das noch nicht.
+       </p>
+      </div>
+     </article>
+     <article>
+      <span class="tag">
+       Geplant
+      </span>
+      <div>
+       <h3>
+        Ein nutzbarer, offener Prototyp
+       </h3>
+       <p>
+        Fotos und Beobachtungen erfassen, Quellen und Messwerte einordnen, einen Reparaturverlauf erhalten und Prüfschritte verständlich erklären. Dafür sind 850 Arbeitsstunden über sechs Monate vorgesehen.
+       </p>
+      </div>
+     </article>
+     <article>
+      <span class="tag later">
+       Später möglich
+      </span>
+      <div>
+       <h3>
+        Mehr Geräte und gemeinsames Weiterentwickeln
+       </h3>
+       <p>
+        Ein offenes Austauschformat soll weitere Werkzeuge und Beiträge ermöglichen. Ein öffentlicher Community-Dienst gehört nicht zum geplanten Kernumfang.
+       </p>
+      </div>
+     </article>
+    </div>
+    <div class="funding-note">
+     <strong>
+      Förderbewerbung in Vorbereitung.
+     </strong>
+     <p>
+      RepairProbe bereitet eine Bewerbung beim Prototype Fund vor. Sie ist noch nicht eingereicht; eine Förderung ist nicht bewilligt.
+     </p>
+     <a href="roadmap.html">
+      Den Sechsmonatsplan lesen →
+     </a>
+    </div>
+   </section>
+   <section class="section split">
+    <div>
+     <p class="eyebrow">
+      Forschung &amp; Open Source
+     </p>
+     <h2>
+      Die Idee muss sich
+      <br/>
+      in der Praxis bewähren.
+     </h2>
+    </div>
+    <div class="prose">
+     <p>
+      Eine erste explorative Rückmeldung aus der Reparaturpraxis liegt vor: ein beantworteter Fragebogen, also n=1. Genannt wurden vor allem Informationssuche, Ersatzteile und mechanischer Zugang als Zeitkosten. Unklarheit über den nächsten Test und verlorener Kontext wurden dagegen als selten berichtet.
+     </p>
+     <p>
+      Das ist keine repräsentative Untersuchung und kein Wirksamkeitsnachweis. Weitere Gespräche und sichere Falltests sollen prüfen, wo die Software tatsächlich hilft. Bessere Reparaturergebnisse oder eine Umweltwirkung sind bisher nicht nachgewiesen.
+     </p>
+     <p>
+      Das Produktrepository ist derzeit privat. Die geplanten geförderten Ergebnisse sollen als freie, quelloffene Software veröffentlicht werden. Eine verpflichtende RepairProbe-Cloud oder eigene Messhardware ist nicht vorgesehen.
+     </p>
+    </div>
+   </section>
+   <span aria-hidden="true" class="anchor-alias" id="person">
+   </span>
+   <section class="section contact" id="kontakt">
+    <div>
+     <p class="eyebrow">
+      Hinter dem Projekt
+     </p>
+     <span aria-hidden="true" class="anchor-alias" id="kontakt-title">
+     </span>
+     <h2 id="person-title">
+      Aus Interesse am Reparieren.
+     </h2>
+     <p>
+      RepairProbe ist ein unabhängiges Projekt von Raik Müller. Sein praktischer Hintergrund verbindet CNC, Elektronik, Reparaturen, Automatisierung und Softwareentwicklung.
+     </p>
+     <p>
+      Rückmeldungen aus Repair-Cafés, offenen Werkstätten und der eigenen Reparaturpraxis sind willkommen. Auch Fragen zum Vorhaben helfen weiter.
+     </p>
+    </div>
+    <div class="contact-links">
+     <a class="button primary" href="mailto:repairprobe@gmail.com">
+      Eine E-Mail schreiben ↗
+     </a>
+     <a class="text-link" href="https://github.com/RepairProbe">
+      RepairProbe auf GitHub ↗
+     </a>
+     <p class="small">
+      repairprobe@gmail.com
+     </p>
+    </div>
+   </section>
+  </main>
+  <footer>
+   <div>
+    <a class="brand" href="index.html">
+     RepairProbe
+    </a>
+    <p>
+     Unabhängiges Projekt von Raik Müller.
+    </p>
+   </div>
+   <div>
+    <a href="https://github.com/RepairProbe">
+     GitHub ↗
+    </a>
+    <br/>
+    <a href="mailto:repairprobe@gmail.com">
+     repairprobe@gmail.com
+    </a>
+   </div>
+   <p class="small">
+    Keine Nutzungsverfolgung. Schriften lokal gehostet.
+    <br/>
+    Code lizenziert unter Apache-2.0.
+   </p>
   </footer>
-</body>
+ </body>
 </html>

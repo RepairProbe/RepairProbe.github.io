@@ -1,20 +1,17 @@
 # RepairProbe
 
-> RepairProbe ist ein unabhängiges Open-Source-Projekt von Raik Müller. Es entwickelt offene Software-Infrastruktur für smartphone-gestützte, KI-geführte Elektronikdiagnose.
+> RepairProbe soll Menschen beim Reparieren elektronischer Geräte helfen: verstreute Informationen einordnen und erkennen, was geprüft wurde und was noch Vermutung ist.
 
-RepairProbe trennt in einem Reparaturfall fünf Evidenzklassen: OBSERVED (gesehen), MEASURED (gemessen), RETRIEVED (nachgeschlagen), INFERRED (vermutet) und CONFIRMED (bestätigt). KI-Ausgaben gelten als Einordnung und dürfen Messwerte nicht ersetzen oder erfinden. Die Architektur ist software-only, smartphone-first und local-first. Eine Pflicht-Cloud gibt es nicht, dedizierte Messhardware ist nicht erforderlich.
+Unabhängiges Projekt von Raik Müller. Vorhanden ist eine kleine Software-Baseline mit Messereignisformat, Validator, Mock-Adapter, anfügbarem Evidenzspeicher, reproduzierbarem Replay, passiver Safety-Baseline und vier Tests. Keine fertige Diagnose-App. Die Tests belegen Softwareverhalten, keine reale Messgenauigkeit, KI-Qualität oder Reparaturwirkung.
 
-Vorhanden ist eine kleine geprüfte Baseline im privaten Kernrepository: Messereignis-Vertrag, fail-closed Validierung, Mock-Adapter, append-only Evidence Store, deterministisches Fixture-Replay, passive Safety-Baseline und vier Tests. Eine Smartphone-App existiert noch nicht; sie ist Teil der Planung.
+Geplant ist ein FOSS-Prototyp mit Smartphone-Erfassung, lokalem Reparaturfall, nachvollziehbaren Quellen, optionalen echten Messwerten und begründeten Prüfschritten. Beobachtung (OBSERVED), Messung (MEASURED), Quelle (RETRIEVED), Vermutung (INFERRED) und Bestätigung (CONFIRMED) bleiben getrennt. Keine eigene Messhardware oder verpflichtende RepairProbe-Cloud. Das Produktrepository ist derzeit privat; die geförderten Ergebnisse sollen öffentlich werden.
 
-Ein Antrag zum Prototype Fund (Jahrgang 03) ist in Vorbereitung, geplanter Umfang 850 Stunden über sechs Monate. Eingereicht ist er nicht, bewilligt ist nichts. Erste Repair-Café-Rückmeldung liegt vor (ein Fragebogen, n=1, explorativ; ein Gesprächswunsch); die Planung wurde daraufhin vom „nächsten Prüfschritt“ stärker Richtung Reparaturinformationszugang, Demontage und Ersatzteile angepasst.
+Förderbewerbung beim Prototype Fund in Vorbereitung, nicht eingereicht und nicht bewilligt. Geplant: 850 Stunden über sechs Monate. Second Stage vorgesehen, spätere Auswahl offen. Erste Forschung n=1, explorativ und widersprüchlich: Informationssuche, Ersatzteile und mechanischer Zugang wurden als Zeitkosten genannt; unklarer nächster Test und verlorener Kontext als selten. Keine Pilotpartnerschaften oder Wirkungsnachweise.
 
 ## Links
-
-- [Website](https://repairprobe.github.io/)
-- [Evidenzmodell](https://repairprobe.github.io/evidenzmodell.html)
-- [Fahrplan](https://repairprobe.github.io/roadmap.html)
+- [Start](https://repairprobe.github.io/)
+- [Prinzip](https://repairprobe.github.io/evidenzmodell.html)
+- [Projektstand](https://repairprobe.github.io/roadmap.html)
 - [Technische Basis](https://repairprobe.github.io/technical-baseline.html)
-- [GitHub-Organisation](https://github.com/RepairProbe)
+- [GitHub](https://github.com/RepairProbe)
 - Kontakt: repairprobe@gmail.com
-
-Neue Projektarbeit wird unter Apache-2.0 veröffentlicht. Die Website verwendet kein Tracking, keine Cookies und keine Analyse-Dienste.

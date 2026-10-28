@@ -65,3 +65,11 @@ Jede Entscheidung der Person mit Datum, damit sie nicht erneut diskutiert wird.
 2. `git`-Commit auf Branch, PR nach `main`, Merge (GitHub Pages deployt automatisch)
 3. Live prüfen: `python .zcode/skills/website-bauen/werkzeuge/pruefen.py https://repairprobe.github.io/`
 4. Cache: GitHub Pages CDN refreshed automatisch; bei Stale-Verdacht Hard-Reload im Browser prüfen
+
+## Neuausrichtung 28.10.2026
+
+Phase 3–5 vollständig neu umgesetzt: verständlicher Reparaturnutzen, geplantes Radio-Szenario, klare Stand-Trennung, n=1-Forschung ehrlich eingeordnet. Phase 6 lokal geprüft: alle fünf Seiten in fünf Viewports, Screenshots angesehen, 0 defekte interne Links, keine Fremdrequests oder Speicherung, Textkontraste mindestens 5,45:1. Details: website-arbeit/pruefung-2026-10-28.md. Unabhängige Abnahme und Veröffentlichung dieser Fassung noch ausstehend.
+
+Impressum: `BLOCKED_OWNER_INPUT`, Anschrift fehlt; keine privaten Pflichtangaben veröffentlicht. Phase 8 bleibt beim Projekteinhaber.
+
+Unabhängige lokale Abnahme abgeschlossen: ursprünglicher separater Review meldete drei P2, korrigiert und von der unabhängigen Root-Instanz gezielt nachgeprüft. Kein offener P1/P2. Details und technische Grenze des Reviewer-Neustarts im Prüfbericht. Veröffentlichung/Live-Abnahme dieser Fassung steht noch aus.

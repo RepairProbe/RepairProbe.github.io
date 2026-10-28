@@ -1,303 +1,287 @@
-# texte.md — alle Texte der Seite (Phase 3)
+# Website-Texte · Neuausrichtung 28.10.2026
 
-Sprache: Deutsch, `lang="de"`. Schreibregeln geprüft (siehe Ende). Quelle aller Fakten: `website-arbeit/PRODUCT.md` mit Repo-Belegen. Personenvorgaben aus PR #7 (gemerged 2026-10-10) werden wörtlich übernommen.
+## Gemeinsame Navigation und Footer
 
----
+RepairProbe
+Start
+Prinzip
+Projektstand
+Technische Basis
+Kontakt
+Zum Inhalt springen
+Unabhängiges Projekt von Raik Müller.
+Keine Nutzungsverfolgung. Schriften lokal gehostet.
+Code lizenziert unter Apache-2.0.
+GitHub ↗
 
-## Claim-/Evidenz-Audit des Ist-Zustands (vor Redesign)
+## index.html
 
-| # | Bestehende Aussage | Klasse | Maßnahme |
-|---|---|---|---|
-| 1 | „Quelloffene Reparaturhilfe“ | VERIFIED_PARTIAL | Behalten, stets mit „in Entwicklung“ gekoppelt |
-| 2 | Hero-Beispiel „Fernseher … Eine Spannung wurde gemessen“ | PARTIALLY GROUND (generisch formuliert) | Ersetzt durch den dokumentierten echten Ablauf aus ADR-0002 (Diodentest statt pauschaler Spannung), klar als Entwicklungsfall gekennzeichnet |
-| 3 | „Vier einfache Schritte“ als „So geht’s“ | MISLEADING (App existiert nicht) | Umbenannt in geplanten Ablauf, mit dem echten Fall verschmolzen und als „so soll es einmal laufen“ markiert |
-| 4 | Evidenz-Gitter Gesehen/Gemessen/Nachgeschlagen/Vermutet/Bestätigt | VERIFIED_CURRENT | Behalten, ausgebaut mit kanonischen Beispielen aus ADR-0002 |
-| 5 | „Noch nicht fertig.“ | VERIFIED_CURRENT | Behalten |
-| 6 | „Messdaten können geprüft, gespeichert und mit ihrer Herkunft festgehalten werden“ | VERIFIED_CURRENT | Präzisiert (vier Baseline-Tests, Replay, SafetyGate) |
-| 7 | Fahrplan „Stand 28.09.2026“, „Am 1. Oktober 2026 soll … abgeglichen werden“ | OUTDATED | Aktualisiert auf Stand 10.10.2026, Readiness-Prüfung vom 9.10.2026, „nichts eingereicht, nichts bewilligt“ |
-| 8 | 850-Stunden-/Monatsplanung | VERIFIED_CURRENT (readiness 2026-10-09) | Ergänzt |
-| 9 | Technische-Baseline-Seite | VERIFIED_CURRENT | Detailrefresh, Ökosystem-Einordnung ergänzt |
-| 10 | Person CNC-Hintergrund | VERIFIED_CURRENT (PUBLIC_COPY) | Behalten, persönliche Motivation ergänzt |
-| 11 | „Keine Nutzungsverfolgung · keine erfundenen Messwerte“ | VERIFIED_CURRENT | Behalten |
-| 12 | Unterseiten verlinken `index.html#idee` | BROKEN (Anker existiert nicht) | Behoben (neue Ankerstruktur) |
-| 13 | Org-Profil verlinkt „Öffentlicher Fahrplan“ auf GitHub-Projects | STALE/RISK (Erreichbarkeit ungeprüft) | Eigener PR in `RepairProbe/.github` auf `https://repairprobe.github.io/roadmap.html` |
-| 14 | „Öffentlicher Fahrplan · Stand 28.09.2026“ (Fahrplan-Unterseiten-Nav verweist auf `#idee`, `#pruefung` teils fehlend) | BROKEN/PARTIAL | Nav auf allen Seiten vereinheitlicht |
+Titel: Reparieren beginnt mit Verstehen. | RepairProbe
+Beschreibung: RepairProbe entwickelt offene Reparaturhilfe für Elektronik: Quellen einordnen, echte Messungen und Vermutungen unterscheiden. Prototyp geplant.
 
-Nicht vorhandene, aber nötige Korrekturen: keine. Es wurden keine Testimonials, Zahlen, Partner oder Erfolgsquoten erfunden; die einzige Statistik (Open Repair Alliance 2024) ist mit Quelle belegt.
+Offene Software für die Elektronikreparatur
+Reparieren beginnt
+mit Verstehen.
+RepairProbe soll Menschen beim Reparieren elektronischer Geräte helfen: verstreute Informationen einordnen und erkennen, was geprüft wurde und was noch Vermutung ist.
+Den geplanten Ablauf ansehen
+↓
+Projektstand &amp; Fahrplan →
+ In Entwicklung · Kleine technische Basis vorhanden · Noch keine fertige App
+Die Idee an einem Beispiel
+Das Radio bleibt stumm.
+Eine Anleitung hier, ein Hinweis im Forum dort. Aber was passt zum eigenen Gerät? Und was wurde tatsächlich überprüft?
+Geplantes Nutzungsszenario, keine Produktoberfläche.
+Das Problem
+Informationen gibt es viele.
+Der Zusammenhang fehlt oft.
+Bei einer Reparatur verteilt sich das Wissen auf Schaltpläne, Datenblätter, Foren und persönliche Erfahrung. Das passende Material zu finden kostet Zeit. Auch der Zugang zum Gerät und die Suche nach Ersatzteilen können aufhalten.
+RepairProbe soll diese Informationen mit dem konkreten Gerät und dem bisherigen Reparaturverlauf verbinden. Die reparierende Person soll nachvollziehen können, woher eine Aussage kommt und wie sicher sie ist.
+So könnte es künftig funktionieren
+Ein Radio geht nicht mehr an. Was nun?
+Geplant
+Dieses Beispiel erklärt den vorgesehenen Ablauf. Es zeigt keine bereits verfügbare App und ist keine Reparaturanleitung.
+01
+Gerät und Problem erfassen
+Die Person hält das Modell, ein Foto und das Fehlerbild fest: Das Radio reagiert beim Einschalten nicht.
+02
+Passende Informationen finden
+RepairProbe soll bei der Einordnung gerätespezifischer Quellen helfen. Woher ein Hinweis stammt und ob er zum Gerät passt, bleibt sichtbar.
+03
+Beobachtung und Messung trennen
+„Keine Anzeige“ ist eine Beobachtung. Ein mit einem vorhandenen Messgerät erfasster Wert ist eine Messung. Ein Foto ersetzt sie nicht.
+04
+Vermutungen sichtbar lassen
+Ein möglicher Fehler bleibt eine Vermutung, bis eine passende Prüfung ihn stützt oder widerlegt. Fehlende Informationen werden benannt.
+05
+Den nächsten Prüfschritt verstehen
+Der Prototyp soll erklären, warum ein Schritt sinnvoll ist und welche Voraussetzungen gelten. Bei gefährlichen oder unbekannten Energiezuständen soll er stoppen.
+06
+Den Verlauf nachvollziehen
+Neue Ergebnisse sollen in einem lokalen Reparaturfall erhalten bleiben. Die Person entscheidet über eine spätere Weitergabe.
+Arbeiten an Netzspannung sind kein vorgesehener Anwendungsbereich für Einsteiger. Die geplante Assistenz ersetzt keine Fachkenntnis.
+Das Produktprinzip
+Eine plausible Antwort
+ist noch kein Messwert.
+Eine KI kann Hinweise einordnen und Erklärungen formulieren. RepairProbe soll dabei jede Aussage mit ihrer Herkunft verbinden. Beobachtungen, echte Messwerte, Quellen und Vermutungen bleiben unterscheidbar.
+Die fünf Informationsarten verstehen →
+Beobachtet
+ Das Radio zeigt keine Reaktion.
+Nachgeschlagen
+ Ein Hinweis aus einer passenden Unterlage.
+Vermutet
+ Eine mögliche Ursache, noch ungeprüft.
+Eine Vermutung wird durch Wiederholung nicht zur Messung.
+Ehrlicher Projektstand
+Was da ist. Was entstehen soll.
+Die technische Basis →
+Vorhanden
+Eine kleine technische Software-Basis
+Sie prüft und speichert Messereignisse und kann vorbereitete Abläufe reproduzieren. Vier Tests prüfen dieses Softwareverhalten. Eine nutzbare Diagnose-App ist das noch nicht.
+Geplant
+Ein nutzbarer, offener Prototyp
+Fotos und Beobachtungen erfassen, Quellen und Messwerte einordnen, einen Reparaturverlauf erhalten und Prüfschritte verständlich erklären. Dafür sind 850 Arbeitsstunden über sechs Monate vorgesehen.
+Später möglich
+Mehr Geräte und gemeinsames Weiterentwickeln
+Ein offenes Austauschformat soll weitere Werkzeuge und Beiträge ermöglichen. Ein öffentlicher Community-Dienst gehört nicht zum geplanten Kernumfang.
+Förderbewerbung in Vorbereitung.
+RepairProbe bereitet eine Bewerbung beim Prototype Fund vor. Sie ist noch nicht eingereicht; eine Förderung ist nicht bewilligt.
+Den Sechsmonatsplan lesen →
+Forschung &amp; Open Source
+Die Idee muss sich
+in der Praxis bewähren.
+Eine erste explorative Rückmeldung aus der Reparaturpraxis liegt vor: ein beantworteter Fragebogen, also n=1. Genannt wurden vor allem Informationssuche, Ersatzteile und mechanischer Zugang als Zeitkosten. Unklarheit über den nächsten Test und verlorener Kontext wurden dagegen als selten berichtet.
+Das ist keine repräsentative Untersuchung und kein Wirksamkeitsnachweis. Weitere Gespräche und sichere Falltests sollen prüfen, wo die Software tatsächlich hilft. Bessere Reparaturergebnisse oder eine Umweltwirkung sind bisher nicht nachgewiesen.
+Das Produktrepository ist derzeit privat. Die geplanten geförderten Ergebnisse sollen als freie, quelloffene Software veröffentlicht werden. Eine verpflichtende RepairProbe-Cloud oder eigene Messhardware ist nicht vorgesehen.
+Hinter dem Projekt
+Aus Interesse am Reparieren.
+RepairProbe ist ein unabhängiges Projekt von Raik Müller. Sein praktischer Hintergrund verbindet CNC, Elektronik, Reparaturen, Automatisierung und Softwareentwicklung.
+Rückmeldungen aus Repair-Cafés, offenen Werkstätten und der eigenen Reparaturpraxis sind willkommen. Auch Fragen zum Vorhaben helfen weiter.
+Eine E-Mail schreiben ↗
+RepairProbe auf GitHub ↗
+repairprobe@gmail.com
 
----
 
-## Seite 1: index.html (Startseite)
+## evidenzmodell.html
 
-**Meta**
-- Titel: `RepairProbe – Reparaturdiagnose mit klaren Belegen`
-- Beschreibung: `Quelloffene Reparaturdiagnose in Entwicklung: Beobachtungen, echte Messwerte, Quellen und Vermutungen bleiben getrennt. Projektstatus öffentlich dokumentiert.`
+Titel: Was wissen wir wirklich? | RepairProbe
+Beschreibung: Wie RepairProbe Beobachtungen, Messungen, Quellen, Vermutungen und Bestätigungen nachvollziehbar trennen soll.
 
-### Hero
-- Sprunglink: `Zum Inhalt springen`
-- Marke: RepairProbe (Stempelzeichen: Prüfspitze), Link auf Startseite
-- Nav: `Evidenzmodell` · `Fahrplan` · `Technische Basis` · `GitHub` (extern, mit Hinweis „öffnet github.com“ als title/aria)
-- H1: `Gemessen ist nur, was wirklich gemessen wurde.`
-- Lede: `RepairProbe ist ein quelloffenes Projekt, das Reparaturdiagnose nachvollziehbar machen will. Beobachtungen, echte Messwerte, technische Quellen und KI-Einordnungen bleiben hier getrennt. So bleibt erkennbar, was bekannt ist und was nur vermutet wird.`
-- Ehrlichkeitszeile: `Noch in Entwicklung. Eine fertige App gibt es nicht. Alles hier ist öffentlich einsehbar.`
-- Aktionen: Button `Den Ansatz verstehen` → #ansatz · Button `Was heute existiert` → #stand · Textlink `Projekt auf GitHub`
-- Hero-Seitenpanel (Statusblock, Mono-Stempel):
-  - `BASELINE` → `vorhanden`
-  - `APP` → `in Planung`
-  - `ANTRAG` → `in Vorbereitung`
-  - `FÖRDERUNG` → `nicht bewilligt`
-  - Zeile darunter: `Stand 10.10.2026`
+Prinzip &amp; Evidenzmodell
+Was wissen wir wirklich?
+Bei einer Reparatur zählt nicht nur die Aussage. Es zählt auch, wie sie zustande gekommen ist. RepairProbe soll diese Herkunft bei jeder Information sichtbar halten.
+Architekturprinzip festgelegt · Vollständiger Ausbau geplant
+Fünf Arten von Information.
+OBSERVED
+Beobachtet
+Was eine Person unmittelbar sieht oder feststellt. Im geplanten Radio-Beispiel: Beim Einschalten bleibt die Anzeige dunkel. Das sagt noch nichts über die Ursache aus.
+MEASURED
+Gemessen
+Ein Wert, der tatsächlich mit einem Messgerät erfasst wurde. Gerät, Messbedingungen und Herkunft gehören dazu. Eine KI darf einen fehlenden Wert weder erfinden noch aus einem Foto als Messung ableiten.
+RETRIEVED
+Nachgeschlagen
+Eine Information aus einer Quelle, etwa einem Datenblatt oder einer Serviceunterlage. Sie braucht einen Herkunftsnachweis und muss zum jeweiligen Gerät passen.
+INFERRED
+Vermutet
+Eine Schlussfolgerung aus den bisherigen Informationen. Auch ein überzeugender KI-Hinweis bleibt eine Vermutung. Die Grundlage und offene Fragen sollen erkennbar sein.
+CONFIRMED
+Bestätigt
+Eine Aussage, die durch eine geeignete Gegenprobe, Bauteilprüfung oder ein nachvollziehbares Reparaturergebnis bestätigt wurde. Die Bestätigung braucht selbst einen Beleg.
+Die feste Grenze
+Eine Einordnung
+ersetzt keine Messung.
+Ein Foto kann sichtbare Schäden oder eine Bauteilbezeichnung zeigen. Elektrische Eigenschaften wie Kapazität, Widerstand oder Spannung lassen sich daraus nicht als echte Messwerte gewinnen.
+Unsicherheit gehört zum Ergebnis.
+Fehlt ein Messgerät, soll die Software bei Beobachtung, Recherche und begründeten Vermutungen bleiben. Eine Lücke wird benannt und nicht mit einem erfundenen Ergebnis gefüllt.
+Sicherheitsgrenzen
+Erst verstehen.
+Dann prüfen.
+Der geplante Prototyp soll erklären, was bekannt ist, welche Frage ein Prüfschritt klärt und welche Voraussetzungen dafür nötig sind. Die Person bleibt verantwortlich für das reale Gerät und ihre Handlungen.
+Feste Sicherheitsregeln sollen außerhalb des austauschbaren KI-Modells liegen. Gefährliche oder unbekannte Energiezustände müssen einen Schritt blockieren können. Die vorhandene passive Sicherheits-Baseline belegt noch keine Sicherheit eines vollständigen Reparaturablaufs.
+Was die vorhandenen Tests tatsächlich belegen →
 
-### Abschnitt: Das Problem (id="problem")
-- Index `01`, H2: `Reparieren scheitert selten am Löten. Meist fehlt das passende Wissen.`
-- Text: `Ein defektes Gerät stellt Fragen, die sich nicht per Foto beantworten lassen. Welche Spannung ist hier normal? Welche Bauteile fallen bei diesem Modell öfter aus? Wie kommt man überhaupt an die betreffende Stelle? Und welches Ersatzteil passt?`
-- Text: `Diese Informationen liegen verstreut: in Datenblättern, Schaltplänen, Forumbeiträgen und im Kopf erfahrener Menschen. Wer sie nicht findet oder nicht verbinden kann, bricht ab oder entsorgt ein Gerät, das zu retten gewesen wäre.`
-- Belegabsatz: `Das Open Repair Alliance berichtet in seinem Jahresbericht 2024 über 18.921 dokumentierte Entsorgungsfälle mit Hindernis: In 12 Prozent der Fälle fehlte die Reparaturinformation, in 10 Prozent fehlten Werkzeug oder Messgerät.` Link: `Bericht des Open Repair Alliance (2024, englisch)` → https://openrepair.org/wp-content/uploads/2024/10/ORA-report-2024-The-rise-of-community-repair.pdf
 
-### Abschnitt: Der Ansatz (id="ansatz")
-- Index `02`, H2: `Beobachtung, Messung, Quelle und Vermutung bleiben getrennt.`
-- Text: `RepairProbe führt diese Arten von Information zusammen und verwaltet sie in einem Repair Case, einem nachvollziehbaren Reparaturfall. Der Kern des Projekts ist eine harte Grenze:`
-- Hervorhebungsblock (Markenkern): `Eine KI darf einordnen und Vermutungen bilden. Sie darf keine Messwerte erfinden. Was gemessen wurde, steht im Fall. Was nur vermutet wird, ist als Vermutung markiert.`
-- Text: `Ein Foto darf zum Beispiel nie einen ESR-Wert erfinden. Es darf aber begründet sagen: Dieser Elko ist ein hochpriorisierter Prüfkandidat. Die Entscheidung, was geprüft wird, bleibt bei der reparierenden Person.`
-- Fünf Evidenzklassen als Protokollzeilen (Vorschau, Mono-Stempel + Kurztext):
-  - `OBSERVED` — `Gesehen: direkt sichtbar oder von einer Person beobachtet.`
-  - `MEASURED` — `Gemessen: tatsächlich mit einem Messgerät erfasst.`
-  - `RETRIEVED` — `Nachgeschlagen: aus Schaltplan, Datenblatt oder Reparaturfall.`
-  - `INFERRED` — `Vermutet: von der KI aus vorhandenen Hinweisen abgeleitet.`
-  - `CONFIRMED` — `Bestätigt: durch Gegenprobe, Bauteilprüfung oder gelungene Reparatur.`
-- Link: `Das Evidenzmodell im Detail ansehen` → evidenzmodell.html
-- Nebensatz (Teil des Foto-Absatzes): `Die Sicherheit bleibt eine Sache der Software, nicht des Sprachmodells: gefährliche oder unbekannte Energiezustände führen zu einer klaren Ablehnung, nicht zu einer Wagnis-Empfehlung.`
+## roadmap.html
 
-### Abschnitt: Ein echter Ablauf (id="fall")
-- Index `03`, H2: `Ein Fernseher, der nicht mehr angeht.`
-- Einordnung (wichtig, ehrlich): `Dieser Ablauf ist in der Entwicklungsarbeit real so durchlaufen worden. Er zeigt, wie das Projekt Reparatur versteht. Die App dafür existiert noch nicht.`
-- Protokoll-Einträge (Mono-Stempel + Text):
-  - `OBSERVED` — `Fotos vom Netzteil-Board und eine Beschreibung des Fehlers: der Fernseher bleibt schwarz.`
-  - `RETRIEVED` — `Zu diesem Board bekannte Fehlerinformationen recherchieren, zum Beispiel zur Gleichrichtung im Sekundärkreis.`
-  - `INFERRED` — `Die Diode wird zum höchsten Prüfkandidaten erklärt. Das ist eine Einordnung, kein Messergebnis.`
-  - `MEASURED` — `Ein Mensch führt den Diodentest durch. Der Wert kommt vom Messgerät, nicht vom Modell.`
-  - `CONFIRMED` — `Mit angehobener Leitung bestätigt der Test den Kurzschluss. Die Vermutung wird zum belegten Befund.`
-  - `INFERRED` — `Weil das Netzteil diese Bauart hat, werden die umliegenden Elkos als nächste Prüfkandidaten priorisiert.`
-  - `MEASURED` — `Kapazität und ESR werden extern gemessen und in den Fall zurückgeschrieben.`
-- Abschlusszeile: `Jeder Eintrag trägt seine Herkunft im Fall. Wer später weitermacht, sieht genau, was belegt ist und was Vermutung blieb.`
+Titel: Der Weg zum ersten Prototyp. | RepairProbe
+Beschreibung: RepairProbe plant 850 Arbeitsstunden über sechs Monate. Der Fahrplan trennt vorhandene Basis, beantragte Entwicklung und spätere Möglichkeiten.
 
-### Abschnitt: Aktueller Stand (id="stand")
-- Index `04`, H2: `Was heute existiert. Was Hypothese bleibt.`
-- Spalte `Vorhanden` (Stempel `VORHANDEN`):
-  - `Ein geprüfter Vertrag für Messereignisse (Repair Measurement Event v1) mit fail-closed Validierung.`
-  - `Ein nur anfügbarer (append-only) Evidence Store und ein deterministisches Fixture-Replay für reproduzierbare Tests.`
-  - `Eine passive Safety-Baseline, die unsichere Aktionen standardmäßig ablehnt.`
-  - `Vier Baseline-Tests im Kernrepository, ausführbar ohne Hardware, Konto oder Cloud.`
-- Spalte `Hypothese und Planung` (Stempel `OFFEN`):
-  - `Die Smartphone-App mit Foto-Eingabe und geführter Fehlersuche ist noch nicht gebaut.`
-  - `Ob der Ansatz Reparaturen tatsächlich erleichtert, muss mit echten Fällen gezeigt werden. Diese Wirkung ist bisher nicht belegt.`
-- Unterabschnitt `Erste Rückmeldung aus der Praxis`:
-  - `Eine Person hat einen Fragebogen beantwortet (n=1, explorativ). Davon getrennt hat eine weitere Person einem Gespräch zugestimmt; ein Termin ist noch nicht vereinbart. Das ist keine Partnerschaft und keine Pilotzusage.`
-  - `Diese eine Antwort bewertet Smartphone-Unterstützung als eher hilfreich und nennt Reparaturinformationen, Ersatzteile und den Zugang zum Gerät als wichtige Hürden. Unklarheit darüber, welcher Prüfschritt als Nächstes sinnvoll ist, und verlorener Reparaturkontext wurden darin als selten berichtet. Begrenzte KI-Hilfe beim Einordnen von Fotos und Zusammenfassen des Verlaufs wurde akzeptiert. Das ist keine Produktvalidierung.`
-  - Kennzeichnung: `Ein Fragebogen, n=1, explorativ; ein separates Gesprächsinteresse ohne vereinbarten Termin. Keine Partnerschaft, keine Pilotzusage, keine Empfehlung.`
-- Aktionen: Button `Fahrplan ansehen` → roadmap.html · Button `Technische Basis` → technical-baseline.html
+Projektstand &amp; Fahrplan
+Der Weg zum ersten Prototyp.
+Aus einer kleinen technischen Basis soll eine nutzbare Reparaturassistenz werden. Die Planung umfasst 850 Arbeitsstunden einer Person über sechs Monate.
+Bewerbung beim Prototype Fund in Vorbereitung · Noch nicht eingereicht · Nicht bewilligt
+Heute
+Der Anfang ist technisch.
+Der nächste Schritt wird praktisch.
+Vorhanden sind ein Format für Messereignisse, Prüfregeln, ein Testadapter, ein anfügbarer Evidenzspeicher, reproduzierbare Testabläufe und eine passive Sicherheits-Baseline. Vier Tests prüfen diese Bausteine ohne echte Hardware oder KI-Modell.
+Die Smartphone-Erfassung, ein dauerhaft gespeicherter Reparaturfall und die geführte Diagnose sind noch nicht gebaut.
+Die vorhandene Basis im Detail →
+Während einer möglichen Förderung geplant
+Sechs Monate mit klaren Grenzen.
+Monat 1
+Den Reparaturfall definieren
+Informationsarten, Herkunft, Unsicherheit und zulässige Zustandswechsel festlegen. Tests sollen unzulässige Übergänge ablehnen.
+Monat 2
+Fotos und Beobachtungen aufnehmen
+Eine Smartphone-Erfassung entwickeln, die Gerät und Fehlerbild dokumentiert. Fotos werden als Beobachtung eingeordnet, nicht als elektrische Messung.
+Monat 3
+Prüfschritte verständlich machen
+Den Ablauf an vorhandene Werkzeuge anpassen. Feste Sicherheitsregeln prüfen Schritte unabhängig vom KI-Modell.
+Monat 4
+Quellen nachvollziehbar einbinden
+Einen begrenzten Testpfad für gerätespezifische Quellen bauen. Herkunft und Unsicherheit sollen sichtbar bleiben. Eine globale Reparaturdatenbank ist nicht vorgesehen.
+Monat 5
+Fälle lokal erhalten und austauschen
+Einen lokalen Speicher und ein offenes Import- und Exportformat umsetzen. Ein dokumentiertes Beispiel soll die Anschlussfähigkeit des Formats prüfen.
+Monat 6
+Erproben und offen veröffentlichen
+Mit sicheren Fällen und freiwilligem Feedback prüfen, was funktioniert. Den Prototyp mit reproduzierbaren Tests und Dokumentation als freie Software veröffentlichen.
+Was geprüft werden muss
+Nutzen ist eine Frage.
+Kein fertiges Ergebnis.
+Die geplante Erprobung soll den Prototyp mit einem allgemeinen multimodalen KI-Chat vergleichen: Bleiben Quellen, Unsicherheit und Fallverlauf nachvollziehbar? Werden Gegenproben und Sicherheitsgrenzen eingehalten?
+Bewusst begrenzter Umfang
+Kein eigenes KI-Modell, keine neue Messhardware und keine verpflichtende RepairProbe-Cloud. Der Prototyp soll die vorhandenen Mittel der reparierenden Person nutzen.
+Ein öffentlicher Community-Dienst und breite Geräteunterstützung sind mögliche spätere Schritte.
+Danach möglich
+Erproben, erklären,
+Weiterentwicklung ermöglichen.
+Eine zusätzliche Second Stage ist in der Bewerbung vorgesehen. Eine spätere Auswahl und Bewilligung sind offen. Geplant sind Aufgabenprüfungen mit Freiwilligen, verständliche Einstiege, dokumentierte Austauschformate und ein realistischer Wartungsweg.
+Diese Phase soll Nutzung und Nachhaltigkeit vorbereiten. Zusätzliche Kernfunktionen sind dafür nicht eingeplant. Es gibt keine behaupteten Pilotpartnerschaften.
+Zum Projekt Kontakt aufnehmen →
 
-### Abschnitt: Person (id="person")
-- Index `05`, H2: `Ich bin Raik Müller.`
-- Zeile: `39+ Jahre jung 😜` (wörtlich aus PR #7 des Projektinhabers)
-- Text: `Mein Hintergrund liegt im technischen/CNC-Bereich. Ich beschäftige mich praktisch mit Reparatur, Elektronik, Software und Automatisierung.`
-- Text: `Reparieren hat mich schon interessiert, lange bevor es KI-Werkzeuge gab. Die eigentliche Hürde war selten die Arbeit am Gerät. Sie war, die richtigen Informationen zu finden und zu verbinden: Forumsbeiträge, Datenblätter, Serviceunterlagen, Messwerte und Erfahrung anderer. Genau daran setzt RepairProbe an.`
-- Ziel (wörtlich aus PR #7): `Mein Ziel mit RepairProbe: Fehlersuche verständlicher machen, damit leichter erkennbar ist, was wirklich bekannt ist, was nur vermutet wird und was als Nächstes sinnvoll geprüft werden sollte.`
 
-### Abschnitt: FAQ (id="fragen")
-- Index `06`, H2: `Häufige Fragen`
-- Q: `Ist RepairProbe eine fertige App?` — A: `Nein. Es gibt eine kleine, geprüfte technische Basis im Kernrepository. Es ist derzeit privat; die Veröffentlichung ist geplant. Die Smartphone-App und die geführte Fehlersuche sind ohnehin erst Planung und noch nicht gebaut.`
-- Q: `Brauche ich spezielle Messhardware von RepairProbe?` — A: `Nein. RepairProbe ist reine Software und passt sich den Werkzeugen an, die vorhanden sind. Ein Multimeter oder Komponententester liefert zusätzliche Messwerte, nötig ist das nicht.`
-- Q: `Darf die KI bei RepairProbe Messwerte erfinden?` — A: `Nein. KI-Ausgaben sind Einordnungen und bleiben als solche markiert. Messwerte kommen nur von echten Messgeräten und von Menschen. Diese Grenze ist im Projekt eine Grundregel: Inference is not Measurement.`
-- Q: `Ist die Förderung schon bewilligt?` — A: `Nein. Ein Antrag zum Prototype Fund ist in Vorbereitung. Eingereicht ist er noch nicht, bewilligt ist nichts.`
-- Q: `Wie kann ich Feedback geben oder mitmachen?` — A: `Schreib eine Mail an repairprobe@gmail.com oder schau auf GitHub vorbei. Rückmeldung aus Repair-Cafés und aus der praktischen Reparatur ist ausdrücklich willkommen.`
+## technical-baseline.html
 
-### Kontakt-Abschnitt (id="kontakt")
-- H2: `Fragen oder Hinweise?`
-- Button `repairprobe@gmail.com` (mailto) · Button `Projekt auf GitHub` → https://github.com/RepairProbe
+Titel: Was heute tatsächlich funktioniert. | RepairProbe
+Beschreibung: Die kleine RepairProbe-Software-Baseline prüft Messereignisse und reproduziert Testabläufe. Sie belegt keine KI-Diagnosequalität oder Reparaturwirkung.
 
-### Footer (alle Seiten)
-- Marke + `Unabhängiges Open-Source-Projekt`
-- Links: `Evidenzmodell` · `Fahrplan` · `Technische Basis` · `Kontakt`
-- Zeile: `Keine Nutzungsverfolgung. Keine erfundenen Messwerte. Code lizenziert unter Apache-2.0.`
+Technische Basis
+Was heute tatsächlich funktioniert.
+RepairProbe hat eine kleine Software-Baseline. Sie prüft, wie Messereignisse verarbeitet und nachvollziehbar gespeichert werden. Eine fertige Reparaturassistenz ist daraus noch nicht entstanden.
+Vor einer möglichen Förderung vorhanden · Produktrepository derzeit privat
+Die vorhandenen Bausteine.
+Format
+Repair Measurement Event v1
+Ein festgelegtes Format beschreibt Messereignisse und ihre Herkunft. Ein Validator lehnt ungültige Ereignisse ab, statt fehlende Angaben stillschweigend zu ergänzen.
+Speicher
+Anfügbarer Evidenzspeicher
+Akzeptierte Ereignisse werden angefügt. Der Verlauf soll überprüfbar bleiben, anstatt frühere Einträge unbemerkt zu ersetzen.
+Testdaten
+Mock-Adapter und reproduzierbares Replay
+Ein Testadapter liefert vorbereitete Ereignisse. Dieselben Testdaten können erneut abgespielt werden. Dafür sind weder echte Hardware noch Cloudzugang oder ein KI-Modell nötig.
+Sicherheit
+Passive SafetyGate-Baseline
+Ein kleiner Satz fester Regeln begrenzt erlaubtes Softwareverhalten. Das ist ein Ausgangspunkt für spätere Sicherheitsprüfungen, keine Freigabe für Arbeiten an elektrischen Geräten.
+Aussagekraft der Tests
+Vier Tests.
+Eine begrenzte Aussage.
+Die vier Baseline-Tests prüfen das Verhalten dieser Softwarebausteine. Insgesamt umfasst die aktuelle Testsuite elf Tests: vier Baseline-Tests einschließlich Replay und Sicherheitsregeln sowie sieben Prüfungen der Repository-Verträge. Sie sind kein Nachweis für Messgenauigkeit realer Geräte, Bildverständnis oder KI-Diagnosequalität.
+Noch nicht vorhanden
+Smartphone-Erfassung, dauerhaft gespeicherte Reparaturfälle, geführte Diagnose, eine ausgebaute Quellenanbindung und ein offenes Austauschpaket gehören zur geplanten Entwicklung.
+Den geplanten Umfang ansehen →
+Architektur &amp; Offenheit
+Am Gerät orientiert.
+Mit nachvollziehbaren Grenzen.
+Die geplante Architektur führt Fotos, Nutzerbeobachtungen, optionale reale Messwerte und recherchierte Quellen in einem lokalen Reparaturfall zusammen. Eine austauschbare KI soll Einordnungen und Erklärungen liefern. Feste Sicherheitsregeln liegen außerhalb des Modells.
+Der Kern soll ohne verpflichtenden RepairProbe-Cloud-Dienst und ohne eigene RepairProbe-Messhardware nutzbar werden. Für die spätere Anbindung externer KI-Dienste sind Datenfluss und Voraussetzungen gesondert zu klären.
+Das Produktrepository ist derzeit privat. Geplante geförderte Ergebnisse sollen unter einer freien Open-Source-Lizenz öffentlich werden. Die öffentliche Website und das Organisationsprofil sind bereits zugänglich.
+Öffentliche Projektorganisation auf GitHub ↗
 
----
 
-## Seite 2: evidenzmodell.html
+## 404.html
 
-**Meta**
-- Titel: `Evidenzmodell – RepairProbe`
-- Beschreibung: `Fünf Evidenzklassen von OBSERVED bis CONFIRMED. Warum KI-Einordnungen keine Messwerte ersetzen und Unsicherheit sichtbar bleibt.`
+Titel: Diese Seite ist nicht da. | RepairProbe
+Beschreibung: Die gesuchte Seite wurde nicht gefunden. Zurück zur RepairProbe-Startseite oder zum Projektfahrplan.
 
-### Hero
-- H1: `Fünf Evidenzklassen. Eine harte Grenze.`
-- Lede: `Jede Information in einem Reparaturfall trägt eine Herkunft. Fünf Klassen trennen, was gesehen, gemessen, nachgeschlagen, vermutet und bestätigt wurde. Sie sind nicht austauschbar.`
-- Ehrlichkeitszeile: `Diese Klassen sind als Architekturentscheidung festgehalten (ADR-0002 im Kernrepository). Ihren technischen Ausbau plant das Projekt als erste Fördermaßnahme.`
+Fehler 404
+Diese Seite ist nicht da.
+Vielleicht hat sich die Adresse geändert. Auf der Startseite geht es weiter.
+Zur Startseite →
+Zum Projektfahrplan →
 
-### Die fünf Klassen mit kanonischen Beispielen
-Jede Klasse: Stempel + Definition + Beispielzeile (aus ADR-0002):
-- `OBSERVED` — `Direkt sichtbar oder von einer Person unmittelbar beobachtet.` Beispiel: `Auf dem Foto ist der Deckel des Elkos gewölbt.`
-- `MEASURED` — `Ein Wert, der tatsächlich mit einem Messgerät erfasst wurde.` Beispiel: `Der Komponententester zeigt ESR = 3,6 Ω.`
-- `RETRIEVED` — `Aus einer technischen Quelle oder einem dokumentierten Reparaturfall abgerufen.` Beispiel: `Das Servicehandbuch zeigt: D318 hängt an der Sekundärkreis-Gleichrichtung.`
-- `INFERRED` — `Eine Schlussfolgerung aus der vorhandenen Evidenz, zum Beispiel von der KI.` Beispiel: `Der Elko ist ein Hauptverdächtiger. Bleibt eine Vermutung, solange nichts gemessen wurde.`
-- `CONFIRMED` — `Durch Gegenprobe, Bauteilprüfung oder Reparaturergebnis bestätigt.` Beispiel: `D318 ist mit angehobener Leitung immer noch kurzschlüssig. Die Diode ist defekt.`
+## Kompatible Abschnittsanker
 
-### Die Grenze
-- H2: `Inference is not Measurement.`
-- Text: `Das Modell darf fehlende Messungen nicht simulieren und Vermutungen nicht stillschweigend zu Tatsachen befördern. Wer später in den Fall schaut, soll jeder Aussage ansehen, woher sie kommt.`
-- Gegenüberstellung (zwei Panels):
-  - `Was ein Foto leisten darf:` `Gerätelabels und Bauteilbezeichnungen erkennen, Bauteilfamilien einordnen, sichtbare Schäden benennen, räumliche Zusammenhänge für die Führung nutzen.`
-  - `Was ein Foto nie liefern darf:` `ESR, Leckstrom, Kapazität, Widerstand, Rail-Spannungen oder Halbleiterzustände. Diese Werte kommen nur aus echten Messungen.`
+Bestehende Deep-Links bleiben gültig. Aliasanker verweisen auf den semantisch passenden neuen Abschnitt; sie führen keine alten Inhalte wieder ein. Frühere Fragen zum Reifegrad führen auf den Projektstand.
 
-### Unsicherheit
-- H2: `Unsicherheit bleibt sichtbar.`
-- Text: `Eine brauchbare Erklärung beschreibt, was bekannt ist, was erwartet wird, was abweicht und was weiterhin unklar ist. „U17 ersetzen“ ist keine Diagnose. Wo kein Messgerät vorhanden ist, bleibt der Fall bei Beobachtung, Recherche und begründeter Wahrscheinlichkeit, und die Grenze wird ausdrücklich gekennzeichnet.`
-
-### Sicherheit
-- H2: `Anfängerfreundlich heißt nicht gefahrlos.`
-- Text: `Die Wissensbarriere soll sinken, die elektrische Sicherheitsbarriere nicht. Bei unbekannten oder gefährlichen Energiezuständen lehnt die Software riskante Schritte standardmäßig ab (fail-closed). Sicherheitsregeln liegen außerhalb des Sprachmodells und können von ihm nicht überschrieben werden. Jede Empfehlung wird erklärt, bevor etwas passiert: explanation before action.`
-- Nebensatz: `Auch das ersetzt keine elektrische Sicherheitszertifizierung und keine Sorgfalt der Person am Gerät.`
-
-### Ausblick
-- Zeile: `Der Ausbau des Evidenzmodells ist Teil des geplanten Förderumfangs.`
-- Aktionen: Button `Zum Fahrplan` → roadmap.html · Button `Technische Basis` → technical-baseline.html
-
----
-
-## Seite 3: roadmap.html
-
-**Meta**
-- Titel: `Fahrplan – RepairProbe`
-- Beschreibung: `Aktueller Stand, Antragsvorbereitung, geplanter Förderumfang und bewusste Grenzen von RepairProbe. Nichts eingereicht, nichts bewilligt.`
-
-### Hero
-- Epoche: `Öffentlicher Fahrplan · Stand 10.10.2026`
-- H1: `Was ist schon da? Was kommt als Nächstes?`
-- Lede: `Dieser Fahrplan trennt vorhandene Vorarbeit, laufende Antragsvorbereitung und geplante Förderarbeit. Ein Antrag zum Prototype Fund ist in Vorbereitung. Eingereicht ist er noch nicht. Eine Förderung ist weder beantragt noch bewilligt.`
-- Aktionen: Button `Zum aktuellen Stand` → #heute · Button `Technische Vorarbeit` → technical-baseline.html
-- Ehrlichkeitszeile: `Vorhanden ≠ geplant · geplant ≠ bewilligt · Wirkung wird erst geprüft`
-- Seitenpanel Statuslegende: `VORHANDEN` bereits umgesetzt · `IN ARBEIT` aktuell vorbereitet · `GEPLANT` nur bei Förderung · `OPTIONAL` noch nicht entschieden · `OFFEN` nicht versprochen
-
-### Heute (id="heute")
-- H2: `Der technische Ausgangspunkt ist vorhanden.`
-- Text: `RepairProbe startet nicht bei null, aber die vorhandene Baseline ist noch kein fertiges Produkt.`
-- Karten (Stempel `Vorhanden`):
-  - `Messereignis & Evidenzbasis` — `Strukturierte Messereignisse, Evidence Store und die Trennung von realer Messung und Ableitung sind als technische Baseline vorhanden.`
-  - `Validierung & Replay` — `Fail-closed Validierung, Mock-Adapter und deterministische Fixture-Replays erlauben reproduzierbare Softwaretests ohne echte Hardware.`
-  - `Öffentliche Projektseite` — `Die öffentliche Website dokumentiert Idee, Evidenzmodell, Projektstatus, technische Vorarbeit und Kontaktmöglichkeiten.`
-
-### In Arbeit (id="antrag")
-- H2: `Vor der Einreichung: den Antrag prüfen, nicht Features stapeln.`
-- Text: `Für den Prototype Fund (Jahrgang 03) wird eine Bewerbung vorbereitet. Gegenstand ist Software-Infrastruktur, geplanter Umfang sind 850 Stunden über sechs Monate. Der Entwurf ist zuletzt am 9. Oktober 2026 inhaltlich aktualisiert worden. Ein erster Abgleich mit dem geöffneten Antragsformular ist dokumentiert (1. Oktober 2026); die Prüfung der einzelnen Felder im Live-Formular mit dem Bewerberkonto steht noch aus.`
-- Text: `Geprüft werden Fragen, Wort- und Zeichenlimits, Antragsberechtigung, FOSS-Anforderungen, Arbeitsstunden und die optionale Second Stage. Offen sind persönliche Angaben, die reale zeitliche Verfügbarkeit und ein externes Gegenlesen durch Nicht-Fachleute.`
-- Text: `Ob das Projekt solo oder als zweiköpfiges Team antritt, und ob die Second Stage mitgeht, ist noch nicht entschieden.`
-- Callout: `Nutzerinterviews und Fragebögen liefern zusätzliche Evidenz. Sie sind kein Gate für die technische Weiterentwicklung.`
-
-### Förderphase (id="foerderphase")
-- H2: `Sechs Monate für einen offenen, überprüfbaren Prototyp.`
-- Text: `Diese Schritte sind der geplante Förderumfang. Sie sind noch nicht bewilligt und werden erst nach einer positiven Förderentscheidung umgesetzt.`
-- Karten (Stempel `Monat 1` … `Monat 6`, Inhalte unverändert aus bestehender Seite, sie sind kanonisch): Evidenz- und Repair-Case-Vertrag · Visueller Smartphone-Intake · Prüfschritte & Sicherheitsgrenzen · Austauschbare KI- & Quellenanbindung · Local-first & Interoperabilität · Validierung, Hardening & Release (Vergleich gegen einen normalen multimodalen KI-Chat)
-
-### Second Stage (id="second-stage")
-- H2: `Mögliche Second Stage: Nutzung statt Feature-Sammlung.`
-- Text: `Diese vier zusätzlichen Monate sind eine vorbereitete Option. Die Entscheidung dafür ist offen; bewilligt ist nichts.` (Karten Monat 7–10 unverändert: Nutzbarkeit & Dokumentation · Interoperabilität & Beiträge · Community & reale Nutzung · Nachhaltigkeit)
-
-### Grenzen (id="grenzen")
-- H2: `Was dieser Fahrplan ausdrücklich nicht verspricht.`
-- Text: `RepairProbe plant im Förderkern kein eigenes LLM, keine universellen Gerätetreiber, kein Boardview-System, keine eigene Pflicht-Cloud und keine dedizierte RepairProbe-Messhardware.`
-- Text: `Bestehende Reparaturquellen, Messsoftware, Testframeworks und KI-Modelle werden über offene Grenzen angebunden statt nachgebaut. Auch universelle Diagnose, zertifizierte elektrische Sicherheit, nachgewiesene Umweltwirkung oder garantierte Reparaturerfolge werden nicht versprochen.`
-- Callout: `Ziel: ein kleiner, offener und reproduzierbarer Softwarekern, dessen Nutzen sich anschließend anhand realer Evidenz bewerten lässt.`
-
-### Weiterlesen
-- Buttons: `Zur Startseite` · `Technische Vorarbeit` · `RepairProbe auf GitHub`
-
----
-
-## Seite 4: technical-baseline.html
-
-**Meta**
-- Titel: `Technische Basis – RepairProbe`
-- Beschreibung: `Die vorhandene Baseline vor einer Förderung: Messereignis, Validierung, Mock-Adapter, Evidence Store, Replay und Safety. Und was sie nicht beweist.`
-
-### Hero
-- H1: `Was bereits existiert, und was noch nicht.`
-- Lede: `RepairProbe startet nicht bei null. Gleichzeitig soll vorhandene Vorarbeit nicht mit der beantragten Neuentwicklung vermischt werden. Diese Seite dokumentiert den technischen Ausgangspunkt und seine Grenzen.`
-- Aktionen: `Baseline ansehen` → #vorhanden · `RepairProbe auf GitHub`
-- Ehrlichkeitszeile: `Vorarbeit ≠ Förderarbeit · Softwaretest ≠ Reparaturerfolg · Inference ≠ Measurement`
-- Seitenpanel: `BASELINE` vor Förderung · `FOSS` Förderergebnisse geplant · `LOCAL-FIRST` Kern ohne Pflicht-Cloud · `VALIDIERUNG` noch ausstehend; Panel-Kernsatz: `Machbarkeit gezeigt. Produktwirkung offen.`
-
-### Baseline (id="vorhanden")
-- H2: `Diese Bausteine sind bereits vorhanden.`
-- Text: `Die aktuelle Baseline ist bewusst klein und hardwarefrei. Sie ist ein technischer Ausgangspunkt, kein Beleg für Produktwirkung.`
-- Karten (Stempel `Vorhanden`): Repair Measurement Event v1 · Fail-closed Validierung · Mock-Adapter · Evidence Store (append-only) · Fixture-Replay · Safety-Baseline (passive, fail-closed Basis; ersetzt keine Sicherheitszertifizierung)
-- Ergänzende Zeile: `Vier Baseline-Tests laufen ohne Hardware, ohne LLM-Zugang, ohne Konto und ohne bezahlten Dienst. Ein Replay-Skript schreibt ausschließlich in ein lokal ignoriertes Verzeichnis und kennzeichnet seine Ausgabe als Software-Fixture, nicht als reale Reparaturevidenz.`
-
-### Grenzen (id="grenzen")
-- H2: `Was diese Baseline ausdrücklich nicht beweist.`
-- Text: `Die vorhandenen Tests belegen, dass definierte Softwareverträge und Fixtures wie erwartet verarbeitet werden.`
-- Text: `Sie belegen nicht, dass RepairProbe ein Gerät korrekt diagnostiziert, Bauteile zuverlässig aus Fotos erkennt, einer allgemeinen KI überlegen ist oder Reparaturen erfolgreicher macht.`
-- Callout: `Evidence before claim: Diese Wirkungen sollen erst im geförderten Prototyp systematisch geprüft werden.`
-
-### Förderarbeit (id="foerderung")
-- H2: `Die Förderung beginnt oberhalb der Baseline.`
-- Text: `Der geplante Förderumfang konzentriert sich auf eine offene, wiederverwendbare Repair-Case- und Evidenzschicht.`
-- Schritte 01–05 (unverändert kanonisch): Repair Case · Evidenztypen · Safety · Interoperabilität · Validierung
-
-### Prüfbarkeit (id="pruefung")
-- H2: `Klare Trennung zwischen vorhanden, geplant und unbewiesen.`
-- Karten: `Vor Förderung` Technischer Ausgangspunkt · `Förderarbeit` Neue Entwicklung · `Noch offen` Produktwirkung
-
-### Ökosystem (id="oekosystem")
-- H2: `Ergänzung statt Ersatz.`
-- Text: `Reparaturwissen und Messsoftware erfindet RepairProbe nicht neu. Es bindet Bestehendes an: Reparaturanleitungen von Plattformen wie iFixit, offene Reparaturdaten (Open Repair Data Standard), Messhardware-Zugriff über Projekte wie sigrok und übliche Instrumente der Reparierenden.`
-- Text: `Der engere Beitrag des Projekts ist eine offene Schicht für Evidenz, Herkunft, Sicherheit und Reparaturfälle, die vorhandene Werkzeuge verbindet, statt sie zu ersetzen.`
-
----
-
-## Seite 5: 404.html
-- H1: `Diese Adresse führt ins Leere.`
-- Text: `Startseite, Evidenzmodell und Fahrplan sind erreichbar.`
-- Buttons: `Zur Startseite` · `Zum Fahrplan`
-
----
-
-## Meta-Texte übergreifend
-- OG-Titel: `RepairProbe – Gemessen ist nur, was wirklich gemessen wurde.`
-- OG-Beschreibung: `Quelloffene Reparaturdiagnose in Entwicklung. Beobachtung, Messung, Quelle und Vermutung bleiben getrennt.`
-- Vorschaubild: 1200×630, Papier-Hell, Tinte-Schriftzug, Cyan-Stempelmarke.
-
-## Formular-Texte
-Kein Formular auf der Seite (Kontakt per Mailto und GitHub). Keine Zusagen zu Antwortzeiten.
-
-## Faktensätze (Quelle für llms.txt und JSON-LD)
-
-1. RepairProbe ist ein unabhängiges Open-Source-Projekt von Raik Müller.
-2. RepairProbe entwickelt offene Software-Infrastruktur für smartphone-gestützte, KI-geführte Elektronikdiagnose.
-3. Der Kern des Projekts trennt fünf Evidenzklassen: OBSERVED, MEASURED, RETRIEVED, INFERRED und CONFIRMED.
-4. KI-Ausgaben gelten als Einordnung und dürfen Messwerte nicht ersetzen oder erfinden.
-5. Die Architektur ist software-only, smartphone-first und local-first. Eine Pflicht-Cloud gibt es nicht, dedizierte Messhardware ist nicht erforderlich.
-6. Vorhanden ist eine kleine geprüfte Baseline: Messereignis-Vertrag, fail-closed Validierung, Mock-Adapter, append-only Evidence Store, deterministisches Fixture-Replay, passive Safety-Baseline und vier Tests.
-7. Eine Smartphone-App existiert noch nicht. Sie ist Teil der Planung.
-8. Ein Antrag zum Prototype Fund (Jahrgang 03) ist in Vorbereitung, geplanter Umfang 850 Stunden über sechs Monate. Eingereicht ist er nicht, bewilligt ist nichts.
-9. Eine Person hat einen Fragebogen beantwortet (n=1, explorativ); eine weitere Person hat einem Gespräch zugestimmt, aber ein Termin ist nicht vereinbart. Die Antwort nennt Reparaturinformationen, Ersatzteile und Gerätezugang als Hürden; Unklarheit über den nächsten Prüfschritt und verlorener Reparaturkontext wurden selten berichtet.
-10. Kontakt: repairprobe@gmail.com. GitHub: https://github.com/RepairProbe. Website: https://repairprobe.github.io/.
-11. Neue Projektarbeit wird unter Apache-2.0 veröffentlicht.
-12. Die Website verwendet kein Tracking, keine Cookies und keine Analyse-Dienste.
-
-## Offene Fragen an die Projektinhaberin/den Projektinhaber
-
-1. Impressum: Für eine vollständige Angabe fehlt die Anschrift. Kein Impressum zu veröffentlichen, solange diese nicht vorliegt.
-2. Porträtfoto für den Personenabschnitt (wird nicht erfunden).
-3. Datenschutzseite: Derzeit reicht die Footer-Aussage (kein Tracking). Falls gewünscht, kann eine faktische Datenschutzerklärung ergänzt werden.
-
-## Schreibregel-Check (Abhaken)
-
-- Keine Gedankenstriche als Satzzeichen: erfüllt (bitte im Build erneut gegenprüfen)
-- Keine Werbe- und Modewörter (erstklassig, innovativ, nahtlos, ganzheitlich): erfüllt
-- Keine unbelegten Zahlen: erfüllt (ORA-Zahl mit Quelle, n=1 gekennzeichnet)
-- Keine Zusagen zu Antwortzeit, Ablaufdauer oder Kosten: erfüllt
-- Echte Umlaute und ß: erfüllt
-- Anrede durchgehalten (neutral, Person in Ich-Form): erfüllt
-- Deutsche Anführungszeichen im finalen HTML: im Build umsetzen
-- Kein Etikett-mit-Doppelpunkt-Aufbau in Fließtexten außer in der wörtlichen Personenvorgabe: erfüllt
-- En-Dash in `<title>`/og:title nur als Trenner zwischen Marken- und Seitenname (Konventionsentscheidung, keine Satzzeichen im Fließtext): dokumentiert
+- `index.html#hero-title` → `h1`
+- `index.html#problem-title` → `#problem h2`
+- `index.html#ansatz` → `.principle`
+- `index.html#ansatz-title` → `.principle h2`
+- `index.html#fall` → `#beispiel`
+- `index.html#fall-title` → `#beispiel h2`
+- `index.html#stand-title` → `#stand h2`
+- `index.html#person` → `#kontakt`
+- `index.html#person-title` → `#kontakt h2`
+- `index.html#fragen` → `#stand`
+- `index.html#fragen-title` → `#stand h2`
+- `index.html#kontakt-title` → `#kontakt h2`
+- `roadmap.html#hero-title` → `h1`
+- `roadmap.html#heute-title` → `#heute h2`
+- `roadmap.html#antrag` → `.page-hero .status-line`
+- `roadmap.html#antrag-title` → `.page-hero .status-line`
+- `roadmap.html#foerderphase` → `#foerderung`
+- `roadmap.html#foerderphase-title` → `#foerderung h2`
+- `roadmap.html#second-stage` → `#spaeter`
+- `roadmap.html#second-stage-title` → `#spaeter h2`
+- `roadmap.html#grenzen` → `.principle`
+- `roadmap.html#grenzen-title` → `.principle h3`
+- `technical-baseline.html#hero-title` → `h1`
+- `technical-baseline.html#vorhanden` → `.status-list`
+- `technical-baseline.html#vorhanden-title` → `.section h2`
+- `technical-baseline.html#grenzen` → `.principle`
+- `technical-baseline.html#grenzen-title` → `.principle h2`
+- `technical-baseline.html#foerderung` → `.principle>div:nth-of-type(2)`
+- `technical-baseline.html#foerderung-title` → `.principle h3`
+- `technical-baseline.html#pruefung` → `.principle`
+- `technical-baseline.html#pruefung-title` → `.principle h2`
+- `technical-baseline.html#oekosystem` → `.split`
+- `technical-baseline.html#oekosystem-title` → `.split h2`
+- `evidenzmodell.html#hero-title` → `h1`
+- `evidenzmodell.html#klassen-title` → `#klassen h2`
+- `evidenzmodell.html#grenze-title` → `#grenze h2`
+- `evidenzmodell.html#unsicherheit` → `#grenze>div:nth-of-type(2)`
+- `evidenzmodell.html#unsicherheit-title` → `#grenze h3`
+- `evidenzmodell.html#sicherheit-title` → `#sicherheit h2`
+- `evidenzmodell.html#ausblick` → `#sicherheit .prose`
+- `evidenzmodell.html#ausblick-title` → `#sicherheit .prose`
+- `404.html#hero-title` → `h1`
