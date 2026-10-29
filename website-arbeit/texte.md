@@ -22,8 +22,8 @@ Beschreibung: RepairProbe entwickelt offene Reparaturhilfe für Elektronik: Quel
 Offene Software für die Elektronikreparatur
 Reparieren beginnt
 mit Verstehen.
-RepairProbe soll Ehrenamtlichen in Repair-Cafés und offenen Werkstätten helfen, einen Elektronikfehler zu prüfen. In einem geplanten Reparaturfall sollen Hinweise zum Gerät, eigene Beobachtungen und Messungen nachvollziehbar bleiben.
 In Entwicklung · Kleine technische Basis vorhanden · Noch keine fertige App
+RepairProbe soll Ehrenamtlichen in Repair-Cafés und offenen Werkstätten helfen, einen Elektronikfehler zu prüfen. In einem geplanten Reparaturfall sollen Hinweise zum Gerät, eigene Beobachtungen und Messungen nachvollziehbar bleiben.
 Den geplanten Ablauf ansehen
 ↓
 Projektstand &amp; Fahrplan →
@@ -39,7 +39,8 @@ RepairProbe soll diese Informationen mit dem konkreten Gerät und dem bisherigen
 So könnte es künftig funktionieren
 Ein Radio geht nicht mehr an. Was nun?
 Geplant
-Dieses Beispiel erklärt den vorgesehenen Ablauf. Es zeigt keine bereits verfügbare App und ist keine Reparaturanleitung.
+Dieses Beispiel erklärt den vorgesehenen Ablauf. Es zeigt keine bereits verfügbare App und ist keine Reparaturanleitung. RepairProbe soll weder selbstständig eine Diagnose bestätigen noch ein Gerät reparieren.
+Geöffnete Netzgeräte, Lithium-Akkupacks und spannungsführende Schaltungen sind keine Einsteigerfälle. Die geplante Assistenz ersetzt keine Fachkenntnis und keine Sicherheitsfreigabe.
 01
 Gerät und Problem erfassen
 Die Person hält das Modell, ein Foto und das Fehlerbild fest: Das Radio reagiert beim Einschalten nicht.
@@ -58,7 +59,6 @@ Der Prototyp soll erklären, warum ein Schritt sinnvoll ist und welche Vorausset
 06
 Den Verlauf nachvollziehen
 Neue Ergebnisse sollen in einem lokalen Reparaturfall erhalten bleiben. Die Person entscheidet über eine spätere Weitergabe.
-Geöffnete Netzgeräte, Lithium-Akkupacks und spannungsführende Schaltungen sind keine Einsteigerfälle. Die geplante Assistenz ersetzt keine Fachkenntnis und keine Sicherheitsfreigabe.
 Das Produktprinzip
 Eine plausible Antwort
 ist noch kein Messwert.
