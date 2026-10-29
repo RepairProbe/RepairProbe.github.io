@@ -201,10 +201,10 @@ p {
   padding-top:9px
 }
 .status-line {
-  font-size:13px;
+  font-size:14px;
   line-height:1.6;
   color:var(--muted);
-  margin-top:26px;
+  margin:16px 0 24px;
   max-width:650px
 }
 .status-dot {
@@ -313,6 +313,13 @@ p {
 .intro {
   max-width:740px;
   color:var(--muted)
+}
+.safety-note {
+  max-width:740px;
+  padding:16px 20px;
+  border-left:3px solid var(--teal);
+  background:#e1efed;
+  font-size:16px
 }
 .tag {
   display:inline-block;
@@ -702,7 +709,7 @@ footer .small {
     max-width:100%
   }
   .status-line {
-    font-size:12px
+    font-size:14px
   }
 }
 
