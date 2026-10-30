@@ -35,6 +35,7 @@ Das Problem
 Informationen gibt es viele.
 Der Zusammenhang fehlt oft.
 Bei einer Reparatur verteilt sich das Wissen auf Schaltpläne, Datenblätter, Foren und persönliche Erfahrung. Das passende Material zu finden kostet Zeit. Auch der Zugang zum Gerät und die Suche nach Ersatzteilen können aufhalten.
+Das deutsche Reparaturrecht stärkt die Herstellerreparatur für bestimmte Produktgruppen unter bestimmten Voraussetzungen. Es gilt nicht pauschal für das Radio in diesem Beispiel. Ob eine zugängliche Anleitung zur Modellvariante passt, muss weiterhin geprüft werden. Quelle: §§ 479a und 479b BGB.
 RepairProbe soll diese Informationen mit dem konkreten Gerät und dem bisherigen Reparaturverlauf verbinden. Die reparierende Person soll nachvollziehen können, woher eine Aussage kommt und wie sicher sie ist.
 So könnte es künftig funktionieren
 Ein Radio geht nicht mehr an. Was nun?
@@ -43,10 +44,10 @@ Dieses Beispiel erklärt den vorgesehenen Ablauf. Es zeigt keine bereits verfüg
 Geöffnete Netzgeräte, Lithium-Akkupacks und spannungsführende Schaltungen sind keine Einsteigerfälle. Die geplante Assistenz ersetzt keine Fachkenntnis und keine Sicherheitsfreigabe.
 01
 Gerät und Problem erfassen
-Die Person hält das Modell, ein Foto und das Fehlerbild fest: Das Radio reagiert beim Einschalten nicht.
+Die Person hält das Modell, soweit erkennbar die Platinenrevision, ein Foto und das Fehlerbild fest: Das Radio reagiert beim Einschalten nicht. Unbekannte Merkmale bleiben offen.
 02
 Passende Informationen finden
-RepairProbe soll bei der Einordnung gerätespezifischer Quellen helfen. Woher ein Hinweis stammt und ob er zum Gerät passt, bleibt sichtbar.
+RepairProbe soll bei der Einordnung gerätespezifischer Quellen helfen. Woher ein Hinweis stammt und für welche Modellvariante er gilt, bleibt sichtbar. Ungeklärte Passung bleibt ungeklärt.
 03
 Beobachtung und Messung trennen
 „Keine Anzeige“ ist eine Beobachtung. Ein mit einem vorhandenen Messgerät erfasster Wert ist eine Messung. Ein Foto ersetzt sie nicht.
@@ -63,7 +64,7 @@ Das Produktprinzip
 Eine plausible Antwort
 ist noch kein Messwert.
 Eine KI kann Hinweise einordnen und Erklärungen formulieren. RepairProbe soll dabei jede Aussage mit ihrer Herkunft verbinden. Beobachtungen, echte Messwerte, Quellen und Vermutungen bleiben unterscheidbar.
-Anders als ein ChatGPT-Gespräch oder eine Anleitung soll der geplante Reparaturfall diese Unterschiede auch nach dem Speichern und Weitergeben erhalten. Ob das im Alltag hilft, muss erst geprüft werden.
+Andere Werkzeuge erfassen bereits Reparaturfälle und Messwerte. RepairProbe soll prüfen, ob die Herkunft und Unsicherheit der Angaben in einem offenen Fall auch nach dem Speichern und Weitergeben erhalten bleiben. Ob das im Alltag hilft, muss erst geprüft werden.
 Die fünf Informationsarten verstehen →
 Beobachtet
  Das Radio zeigt keine Reaktion.
@@ -91,6 +92,7 @@ Forschung &amp; Open Source
 Die Idee muss sich
 in der Praxis bewähren.
 Eine erste explorative Rückmeldung aus der Reparaturpraxis liegt vor: ein beantworteter Fragebogen, also n=1. Genannt wurden vor allem Informationssuche, Ersatzteile und mechanischer Zugang als Zeitkosten. Unklarheit über den nächsten Test und verlorener Kontext wurden dagegen als selten berichtet.
+Die Open Repair Alliance dokumentiert bis Juli 2026 416.282 Reparaturversuche an Elektro- und Elektronikgeräten aus teilnehmenden Gruppen. Diese Zahl zeigt Reparaturaktivität, aber keinen Bedarf für RepairProbe. Quelle: Open Repair Alliance, 16.10.2026.
 Das ist keine repräsentative Untersuchung und kein Wirksamkeitsnachweis. Weitere Gespräche und sichere Falltests sollen prüfen, wo die Software tatsächlich hilft. Bessere Reparaturergebnisse oder eine Umweltwirkung sind bisher nicht nachgewiesen.
 Das Produktrepository ist derzeit privat. Die geplanten geförderten Ergebnisse sollen als freie, quelloffene Software veröffentlicht werden. Eine verpflichtende RepairProbe-Cloud oder eigene Messhardware ist nicht vorgesehen.
 Hinter dem Projekt
